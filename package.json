@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ahmed-tarek-helmy.github.io/ACML",
+  "homepage": "https://github.com/Ammar-Magdy/ACML-Website-2026.git",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
