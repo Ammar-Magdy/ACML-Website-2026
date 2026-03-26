@@ -33,6 +33,7 @@ export default function Services() {
     {
       icon: BookOpen,
       title: "Books & Periodicals :E-Forms",
+      path: "/publishers/ipr",
       image: imgBooks,
       description:
         "Comprehensive collection of academic books, journals, and periodicals from leading international publishers. We provide access to the latest publications across all disciplines and fields of study.",

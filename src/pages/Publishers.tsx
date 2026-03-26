@@ -204,6 +204,13 @@ export default function Publishers() {
         { name: "ASTM Proficiency Testing Program (PTP)", id: "astm-ptp" },
       ],
     },
+    {
+      category: "Books & Periodicals :E-Forms",
+      id: "digital-library",
+      organizations: [
+        { name: "International Publishers Representatives (IPR)", id: "ipr" },
+      ],
+    },
   ];
 
   const features = [

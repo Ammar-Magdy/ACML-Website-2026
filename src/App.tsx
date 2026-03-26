@@ -53,6 +53,7 @@ import PublisherASMEBPVC from "./pages/Publishers/PublisherASMEBPVC";
 import PublisherASTM from "./pages/Publishers/PublisherASTM";
 import PublisherIEC from "./pages/Publishers/PublisherIEC";
 import PublisherUIC from "./pages/Publishers/PublisherUIC";
+import PublisherIPR from "./pages/Publishers/PublisherIPR";
 import PublisherASTMPTP from "./pages/Publishers/PublisherASTMPTP";
 
 import ChemwatchMaster from "./pages/Publishers/ChemWatch/ChemwatchMaster";
@@ -195,6 +196,7 @@ function App() {
               <Route path="/publishers/astm" element={<PublisherASTM />} />
               <Route path="/publishers/iec" element={<PublisherIEC />} />
               <Route path="/publishers/uic" element={<PublisherUIC />} />
+              <Route path="/publishers/ipr" element={<PublisherIPR />} />
               <Route
                 path="/publishers/astm-ptp"
                 element={<PublisherASTMPTP />}
