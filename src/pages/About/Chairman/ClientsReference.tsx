@@ -32,7 +32,7 @@ const ClientsReference = () => {
       data: periodicals,
     },
     { id: "books", title: "Books & References", data: books },
-    { id: "databases", title: "Databases (CD-ROM & Online)", data: databases },
+    { id: "databases", title: "Databases", data: databases },
     {
       id: "librarySupplies",
       title: "Library Supplies & Furniture",
@@ -45,12 +45,12 @@ const ClientsReference = () => {
     },
     {
       id: "educationalVideos",
-      title: "Educational Videos & Cassettes",
+      title: "Educational databases",
       data: educationalVideos,
     },
     {
       id: "internationalStandards",
-      title: "International Standards & Specifications",
+      title: "Digital Library of International Codes & Standards",
       data: internationalStandards,
     },
     { id: "restoration", title: "Restoration", data: restoration },

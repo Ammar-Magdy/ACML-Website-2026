@@ -35,7 +35,7 @@ export default function Publishers() {
       organizations: [
         { name: "ACM - Association for Computing Machinery", id: "acm" },
 
-        { name: "Ebsco Information Services ", id: "ebsco" },
+        { name: "EBSCO Information Services ", id: "ebsco" },
         { name: "EBSCO Databases List", id: "ebsco-databases" },
         { name: "Taylor & Francis Research", id: "taylor-francis" },
       ],

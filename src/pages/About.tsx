@@ -334,7 +334,7 @@ export default function About() {
                       to="/about/chairman/clients"
                       className="flex items-center text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                     >
-                      <Workflow size={18} className="mr-2" /> EnppI
+                      <Workflow size={18} className="mr-2" /> ENPPI
                     </Link>
                   </li>
                 </ul>
@@ -351,7 +351,7 @@ export default function About() {
               Our Journey
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Decades of excellence in information technology and library
+              Decades of excellence in information technology and digital library
               solutions
             </p>
           </div>
