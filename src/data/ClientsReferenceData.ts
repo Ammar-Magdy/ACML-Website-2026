@@ -448,6 +448,8 @@ export const books = [
 ];
 
 export const databases = [
+  { name: "National Consulting Bureau Co. (NCB)", year: "2025", country: "Kuwait" },
+  { name: "Kuwait University", year: "2025", country: "Kuwait" },
   { name: "BUE", year: "2019", country: "Egypt" },
   { name: "MIU", year: "2019", country: "Egypt" },
   { name: "DAR AL TAMAYOZ", year: "2019", country: "Egypt" },

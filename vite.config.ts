@@ -5,7 +5,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   base: "/ACML-Website-2026/",
-  assetsInclude: ["**/*.docx", "**/*.pptx"],
+  assetsInclude: ["**/*.docx", "**/*.pptx", "**/*.wmv"],
   optimizeDeps: {
     exclude: ["lucide-react"],
   },

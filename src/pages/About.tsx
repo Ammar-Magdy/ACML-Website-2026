@@ -299,42 +299,42 @@ export default function About() {
                 <ul className="space-y-3">
                   <li>
                     <Link
-                      to="/about/chairman"
+                      to="/about/projects/suez"
                       className="flex items-center text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                     >
-                      <Workflow size={18} className="mr-2" /> SCA
+                      <Workflow size={18} className="mr-2" /> SUEZ (SCA)
                     </Link>
                   </li>
                   <li>
                     <Link
-                      to="/about/chairman/awards"
+                      to="/about/projects/elsewedy"
                       className="flex items-center text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                     >
-                      <Workflow size={18} className="mr-2" /> PSP
+                      <Workflow size={18} className="mr-2" /> Elsewedy (PSP)
                     </Link>
                   </li>
                   <li>
                     <Link
-                      to="/about/chairman/accomplishments"
+                      to="/about/projects/alx-pc"
                       className="flex items-center text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                     >
-                      <Workflow size={18} className="mr-2" /> APC
+                      <Workflow size={18} className="mr-2" /> ALX-PC (APC)
                     </Link>
                   </li>
                   <li>
                     <Link
-                      to="/about/chairman/clients"
+                      to="/about/projects/colas-rail"
                       className="flex items-center text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                     >
-                      <Workflow size={18} className="mr-2" /> Colas Rail
+                      <Workflow size={18} className="mr-2" /> COLAS-RAIL
                     </Link>
                   </li>
                   <li>
                     <Link
-                      to="/about/chairman/clients"
+                      to="/about/projects/enppi"
                       className="flex items-center text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                     >
-                      <Workflow size={18} className="mr-2" /> ENPPI
+                      <Workflow size={18} className="mr-2" /> Enppi
                     </Link>
                   </li>
                 </ul>

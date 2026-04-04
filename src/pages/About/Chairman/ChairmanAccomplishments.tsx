@@ -1,7 +1,7 @@
-import { Book, Globe, ExternalLink, Award } from "lucide-react";
-import drShawkyBmp from "../../../assets/Photos/About/Chairman/ChairmanAccomplishments/dr.shawky.bmp";
+import { Book, Globe, ExternalLink} from "lucide-react";
 import winnersPdf from "../../../assets/PDF/About/Chairman/ChairmanAccomplishments/winners-full-details-SSCAG.pdf";
-
+import sscgformAr from "../../../assets/PDF/About/Chairman/ChairmanAccomplishments/sscg-form-2026-ar.docx";
+import sscgformEn from "../../../assets/PDF/About/Chairman/ChairmanAccomplishments/sscg-form-2026-en.docx";
 import { useEffect } from "react";
 
 export default function ChairmanAccomplishments() {
@@ -55,7 +55,7 @@ export default function ChairmanAccomplishments() {
                     Winners Full Details (SSCG) <ExternalLink size={14} />
                   </a>
                   <a
-                    href="http://archive.ifla.org/III/grants/sscgform-ar.pdf#view=FitH"
+                    href={`${sscgformAr}#view=FitH`}
                     target="_blank"
                     rel="noopener noreferrer"
                     type="application/pdf"
@@ -64,7 +64,7 @@ export default function ChairmanAccomplishments() {
                     Application Form (Arabic) <ExternalLink size={14} />
                   </a>
                   <a
-                    href="http://archive.ifla.org/III/grants/sscgform-ar.pdf#view=FitH"
+                    href={`${sscgformEn}#view=FitH`}
                     target="_blank"
                     rel="noopener noreferrer"
                     type="application/pdf"

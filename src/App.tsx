@@ -98,6 +98,12 @@ import MAC from "./pages/Services/Products/MAC";
 
 import ScrollRestoration from "./components/ScrollRestoration";
 
+import ProjectSUEZ from "./pages/About/ProjectSUEZ";
+import ProjectCOLASRAIL from "./pages/About/ProjectCOLASRAIL";
+import ProjectEnppi from "./pages/About/ProjectEnppi";
+import ProjectElsewedy from "./pages/About/ProjectElsewedy";
+import ProjectALXPC from "./pages/About/ProjectALXPC";
+
 function App() {
   return (
     <Router basename={import.meta.env.BASE_URL}>
@@ -154,6 +160,13 @@ function App() {
               />
               <Route path="/about/awards" element={<ACMLAwards />} />
               <Route path="/about/awards" element={<ACMLAwards />} />
+
+              {/* Project Routes */}
+              <Route path="/about/projects/suez" element={<ProjectSUEZ />} />
+              <Route path="/about/projects/colas-rail" element={<ProjectCOLASRAIL />} />
+              <Route path="/about/projects/enppi" element={<ProjectEnppi />} />
+              <Route path="/about/projects/elsewedy" element={<ProjectElsewedy />} />
+              <Route path="/about/projects/alx-pc" element={<ProjectALXPC />} />
 
               <Route path="/services" element={<Services />} />
               <Route path="/services/bookshop" element={<Bookshop />} />

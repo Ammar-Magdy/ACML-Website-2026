@@ -6,8 +6,8 @@ import engBroBackImg from "../../../assets/Photos/Services/Products/Librarian/fl
 import arBroFrontImg from "../../../assets/Photos/Services/Products/Librarian/brochour-front - Copy .webp";
 import arBroBackImg from "../../../assets/Photos/Services/Products/Librarian/brochour-back .webp";
 
-import engIntroPdf from "../../../assets/PDF/Services/Products/Librarian/English-introduction-after-revision,received-from-Ibrahim.pdf";
-import arIntroPdf from "../../../assets/PDF/Services/Products/Librarian/Introduction-A.pdf";
+import engIntroPdf from "../../../assets/PDF/Services/Products/Librarian/INTRODUCTION-EN.pdf";
+import arIntroPdf from "../../../assets/PDF/Services/Products/Librarian/INTRODUCTION-Ar.pdf";
 import frIntroPdf from "../../../assets/PDF/Services/Products/Librarian/1-Introduction_Fre.pdf";
 import libEngPdf from "../../../assets/PDF/Services/Products/Librarian/Librarian-E.pdf";
 import libArPdf from "../../../assets/PDF/Services/Products/Librarian/Librarian-A.pdf";

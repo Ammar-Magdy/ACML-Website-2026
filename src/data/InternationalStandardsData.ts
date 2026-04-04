@@ -1,4 +1,29 @@
 export const internationalStandards = [
+{ name: "COLAS RAIL", year: "2025", country: "Egypt" },
+  { name: "HITACHI RAIL", year: "2025", country: "Egypt" },
+  { name: "ORASCOM", year: "2025", country: "Egypt" },
+  { name: "Egyptian Mud Engineering and Chemicals Company (EMEC)", year: "2025", country: "Egypt" },
+  { name: "Egyptian refining company (ERC)", year: "2025", country: "Egypt" },
+  { name: "RASHPETCO", year: "2025", country: "Egypt" },
+  { name: "ETHYDCO", year: "2025", country: "Egypt" },
+  { name: "International Tubular Services – Egypt (ITS)", year: "2025", country: "Egypt" },
+  { name: "Modern Drilling Company (MDC)", year: "2025", country: "Egypt" },
+  { name: "Modern Oil", year: "2025", country: "Egypt" },
+  {
+    name: "Power Generation Engineering and Services Company (PGESCO - Egypt)",
+    year: "2025",
+    country: "Egypt",
+  },
+  { name: "Hassan Allam Construction (HAC)", year: "2025", country: "Egypt" },
+  { name: "Petroleum Gas Company (PETROGAS)", year: "2025", country: "Egypt" },
+  {
+    name: 'Helwan Fertilizers Company (HFC) "HELWAN FERTILIZERS"',
+    year: "2025",
+    country: "Egypt",
+  },
+  { name: "Sidi Kerir Petrochemicals Company (SIDPEC)", year: "2025", country: "Egypt" },
+
+
   { name: "El Teriak Industrial Group", year: "2024", country: "Egypt" },
   { name: "exida Middle East", year: "2024", country: "Egypt" },
   { name: "Giza Systems", year: "2024", country: "Egypt" },
