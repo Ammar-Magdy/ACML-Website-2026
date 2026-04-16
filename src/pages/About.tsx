@@ -318,7 +318,7 @@ export default function About() {
                       to="/about/projects/alx-pc"
                       className="flex items-center text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                     >
-                      <Workflow size={18} className="mr-2" /> ALX-PC (APC)
+                      <Workflow size={18} className="mr-2" />APC
                     </Link>
                   </li>
                   <li>
@@ -334,7 +334,7 @@ export default function About() {
                       to="/about/projects/enppi"
                       className="flex items-center text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                     >
-                      <Workflow size={18} className="mr-2" /> Enppi
+                      <Workflow size={18} className="mr-2" /> ENPPI
                     </Link>
                   </li>
                 </ul>

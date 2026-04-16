@@ -37,7 +37,7 @@ export default function Mission() {
                 </h2>
                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                   ACML is an Egyptian Share Holders Corporation with Egyptian /
-                  Arabian Capital. Our aims is to:
+                  Arabian Capital. Our aims are to:
                   <br />
                 </p>
 
@@ -305,7 +305,7 @@ export default function Mission() {
                       href="mailto:chairman@ACML-egypt.com"
                       className="text-blue-600 dark:text-blue-400 hover:underline font-medium bg-white dark:bg-gray-800 px-2 py-1 rounded shadow-sm"
                     >
-                      chairman@ACML-egypt.com
+                      chairman@acml-egypt.com
                     </a>
                   </li>
                   <li className="flex items-center gap-2">
@@ -319,10 +319,10 @@ export default function Mission() {
                     (3) <span className="font-semibold">the ACML HQ</span>{" "}
                     <u>
                       <a
-                        href="mailto:info@ACML-egypt.com"
+                        href="mailto:info@acml-egypt.com"
                         className="text-blue-600 dark:text-blue-400 hover:underline bg-white dark:bg-gray-800 px-2 py-1 rounded shadow-sm"
                       >
-                        info@ACML-egypt.com
+                        info@acml-egypt.com
                       </a>
                     </u>
                   </li>
@@ -333,10 +333,10 @@ export default function Mission() {
                       of Conduct Hotline can be made by visiting{" "}
                     </span>
                     <a
-                      href="http://www.ACML-egypt.com/"
+                      href="http://www.acml-egypt.com/"
                       className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
                     >
-                      www.ACML-egypt.com
+                      www.acml-egypt.com
                     </a>{" "}
                     <strong>
                       A list of country-specific telephone numbers can be found

@@ -20,8 +20,8 @@ export default function Footer() {
   ];
 
   const services = [
-    { label: "Books & Periodicals", path: "/services/bookshop" },
-    { label: "Electronic Journals", path: "/services" },
+    { label: "Books & Periodicals", path: "/services#books-periodicals" },
+    { label: "Electronic Journals", path: "/services#electronic-journals" },
     { label: "Library Automation", path: "/services/librarian" },
     { label: "Publishers", path: "/publishers" },
   ];
@@ -113,11 +113,11 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start text-sm">
                 <MapPin size={16} className="mr-2 mt-1 flex-shrink-0" />
-                <span>Alexandria, Egypt</span>
+                <span>181-183 Ahmed Shawky Street – Roushdy – Alexandria - Egypt</span>
               </li>
               <li className="flex items-center text-sm">
                 <Phone size={16} className="mr-2 flex-shrink-0" />
-                <span>Contact us for more info</span>
+                <span>(+20) 01005001289 / (+203) 5411741</span>
               </li>
               <li className="flex items-center text-sm">
                 <Mail size={16} className="mr-2 flex-shrink-0" />

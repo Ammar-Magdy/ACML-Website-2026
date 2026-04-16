@@ -93,7 +93,7 @@ export default function Contact() {
       title: "Visit Us",
       details: [
         { text: "ACML Integrated Information Solutions & Systems" },
-        { text: "Alexandria, Egypt" },
+        { text: "181-183 Ahmed Shawky Street – Roushdy – Alexandria - Egypt" },
       ],
       link: "https://maps.app.goo.gl/W5haNwtnD66WmyA16",
     },
@@ -102,8 +102,10 @@ export default function Contact() {
       title: "Call Us",
       details: [
         { text: "General Information:" },
+        { text: "(+20) 01005001289", link: "tel:+201005001289" },
+        
         { text: "(+203) 5411741", link: "tel:+2035411741" },
-        { text: "OR" },
+        
         { text: "(+203) 5411109", link: "tel:+2035411109" },
       ],
       link: "tel:+2035411741",

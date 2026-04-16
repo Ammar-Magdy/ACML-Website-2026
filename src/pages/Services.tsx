@@ -43,6 +43,7 @@ export default function Services() {
         "Special orders and procurement services",
         "Latest editions from top publishers",
       ],
+      linkId: "books-periodicals",
     },
     {
       icon: Database,
@@ -73,6 +74,7 @@ export default function Services() {
         "Archive access and backfiles",
         "Mobile and remote access",
       ],
+      linkId: "electronic-journals",
     },
     {
       icon: Sofa,

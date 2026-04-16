@@ -7,14 +7,14 @@ export default function Employees() {
   }, []);
 
   const sectors = [
-    { name: "Accounting Sector", email: "accounting@ACML-egypt.com" },
-    { name: "Chairman Office Sector", email: "admin@ACML-egypt.com" },
-    { name: "Databases Sector", email: "databases@ACML-egypt.com" },
-    { name: "Standards Sector", email: "standards@ACML-egypt.com" },
-    { name: "Electronic Periodicals Sector", email: "periodical@ACML-egypt.com" },
-    { name: "Electronic Bookshop Sector", email: "info@ACML-egypt.com" },
-    { name: "Supplies Sector", email: "supplies@ACML-egypt.com" },
-    { name: "Library Automation Sector", email: "automation@ACML-egypt.com" }
+    { name: "Accounting Sector", email: "accounting@acml-egypt.com" },
+    { name: "Chairman Office Sector", email: "admin@acml-egypt.com" },
+    { name: "Databases Sector", email: "databases@acml-egypt.com" },
+    { name: "Standards Sector", email: "standards@acml-egypt.com" },
+    { name: "Electronic Periodicals Sector", email: "periodical@acml-egypt.com" },
+    { name: "Electronic Bookshop Sector", email: "info@acml-egypt.com" },
+    { name: "Supplies Sector", email: "supplies@acml-egypt.com" },
+    { name: "Library Automation Sector", email: "automation@acml-egypt.com" }
   ];
 
  

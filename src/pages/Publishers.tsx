@@ -139,7 +139,7 @@ export default function Publishers() {
         },
         { name: "ASTM Proficiency Testing Program (PTP)", id: "astm-ptp" },
 
-        { name: "AWS - American Society for Testing and Materials", id: "aws" },
+        { name: "AWS – AMERICAN WELDING SOCIETY", id: "aws" },
         { name: "AIP - American Institute of Physics", id: "aip" },
         { name: "ChemWatch", id: "chemwatch" },
         { name: "Haystack Gold", id: "haystack-gold" },
@@ -155,7 +155,7 @@ export default function Publishers() {
           id: "siam",
         },
         {
-          name: "S.D.O.S - Standards & International Societies",
+          name: "SDO’s - Standards & International Societies",
           id: "standards",
         },
       ],
@@ -191,11 +191,11 @@ export default function Publishers() {
         },
         { name: "NFPA - National Fire Protection Association", id: "nfpa" },
         {
-          name: "S.D.O.S Standards & International Societies",
+          name: "SDO’s Standards & International Societies",
           id: "standards",
         },
         { name: "UIC - International Union of Railways", id: "uic" },
-        { name: "...ETC", },
+        { name: "ETC...", },
 
       ],
     },
