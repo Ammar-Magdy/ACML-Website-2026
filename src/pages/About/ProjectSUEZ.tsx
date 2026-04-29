@@ -80,18 +80,18 @@ export default function ProjectSUEZ() {
             <div className="md:col-span-2">
               {/* About Section */}
               <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-8 border border-gray-100 dark:border-gray-700 mb-8">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                <h2 className="text-2xl font-bold text-red-600 dark:text-red-400 mb-6 flex items-center">
                   <div className="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 mr-4">
                     <Globe size={20} />
                   </div>
-                  International Surveillance of ships movement Over seas & oceans
+                  International Surveillance of ships movement over seas & oceans
                 </h2>
                 <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-4">
                   <p className="font-medium text-gray-900 dark:text-gray-100">
                     GOLD VERSION: MARITIME INTELLIGENCE
                   </p>
                   <p>
-                    ACML INTEGRATED INFORMAION SOLUTIONS & SYSTEMS (a future company) represents S&P Global (Formerly I H S) from 2000 in Egypt, succeed & proud to apply this sophisticated project for Suez Canal Authority (SCA).
+                    ACML INTEGRATED INFORMAION SOLUTIONS & SYSTEMS (a future company) represents S&P Global (Formerly I H S) from 2000 in Egypt, succeeds & proud to apply this sophisticated project for Suez Canal Authority (SCA).
                   </p>
                   <p>
                     Standard & Poor Global (S&P) - Maritime Intelligence has an international sophisticated project to monitoring all ships movements over seas & oceans with using more than 500 satellites and 1500 Antenna stations spread worldwide on different locations. The surveillance data combined, review, analyse, and dissemination through an international portal under the name "Maritime Intelligence".

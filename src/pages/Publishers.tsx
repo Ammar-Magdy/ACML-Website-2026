@@ -61,7 +61,7 @@ export default function Publishers() {
         { name: "Primal Pictures ", id: "primal-pictures" },
         { name: "Jaypee ", id: "jaypee" },
         { name: "Thieme Group", id: "thieme" },
-        { name: "Ebsco Information Services ", id: "ebsco" },
+        { name: "EBSCO Information Services ", id: "ebsco" },
       ],
     },
     {
@@ -80,7 +80,7 @@ export default function Publishers() {
     },
     {
       category: "Integrated Library Management System",
-      organizations: [{ name: "Librarian", id: "librarian" }],
+      organizations: [{ name: "Librarian A", id: "librarian" }],
     },
     {
       category: "Library Supplies & Furniture",
@@ -126,7 +126,7 @@ export default function Publishers() {
         },
         { name: "ACI - American Concrete Institute", id: "aci" },
         { name: "ANSI - American National Standards Institute", id: "ansi" },
-        { name: "API (American Petroleum Institute)", id: "api" },
+        { name: "API - American Petroleum Institute", id: "api" },
         { name: "ASCE - American Society of Civil Engineers", id: "asce" },
         { name: "ASME - American Society of Mechanical Engineers", id: "asme" },
         {
@@ -139,7 +139,7 @@ export default function Publishers() {
         },
         { name: "ASTM Proficiency Testing Program (PTP)", id: "astm-ptp" },
 
-        { name: "AWS – AMERICAN WELDING SOCIETY", id: "aws" },
+        { name: "AWS – American Welding Society", id: "aws" },
         { name: "AIP - American Institute of Physics", id: "aip" },
         { name: "ChemWatch", id: "chemwatch" },
         { name: "Haystack Gold", id: "haystack-gold" },
@@ -155,7 +155,7 @@ export default function Publishers() {
           id: "siam",
         },
         {
-          name: "SDO’s - Standards & International Societies",
+          name: "SDO’s - Standards Development Organizations & International Societies",
           id: "standards",
         },
       ],
@@ -173,7 +173,7 @@ export default function Publishers() {
           id: "aashto",
         },
         { name: "ANSI - American National Standards Institute", id: "ansi" },
-        { name: "API (American Petroleum Institute)", id: "api" },
+        { name: "API - American Petroleum Institute", id: "api" },
         { name: "ASCE - American Society of Civil Engineers", id: "asce" },
         { name: "ASME - American Society of Mechanical Engineers", id: "asme" },
         {
@@ -191,7 +191,7 @@ export default function Publishers() {
         },
         { name: "NFPA - National Fire Protection Association", id: "nfpa" },
         {
-          name: "SDO’s Standards & International Societies",
+          name: "SDO’s - Standards Development Organizations & International Societies",
           id: "standards",
         },
         { name: "UIC - International Union of Railways", id: "uic" },
@@ -281,7 +281,7 @@ export default function Publishers() {
               <Shield size={40} className="text-white" />
             </div>
             <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              ACML Partners
+              ACML Publishers
             </h1>
             <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
               Comprehensive access to technical standards, regulations, and
@@ -323,7 +323,7 @@ export default function Publishers() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Partners by Organization Type
+              Publishers by Organization Type
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Access standards and regulations from leading organizations

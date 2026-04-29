@@ -104,6 +104,8 @@ import ProjectEnppi from "./pages/About/ProjectEnppi";
 import ProjectElsewedy from "./pages/About/ProjectElsewedy";
 import ProjectALXPC from "./pages/About/ProjectALXPC";
 
+import Projects from "./pages/Projects";
+
 function App() {
   return (
     <Router basename={import.meta.env.BASE_URL}>
@@ -174,8 +176,9 @@ function App() {
               <Route path="/services/mac" element={<MAC />} />
               <Route path="/services/lawyer-mac" element={<LawyerMAC />} />
 
-              <Route path="/partners" element={<Partners />} />
-              <Route path="/publishers" element={<Publishers />} />
+             <Route path="/partners" element={<Partners />} />
+<Route path="/projects" element={<Projects />} />
+<Route path="/publishers" element={<Publishers />} />
 
               <Route path="/publishers/aiaa" element={<PublisherAIAA />} />
               <Route path="/publishers/esdu" element={<PublisherESDU />} />
