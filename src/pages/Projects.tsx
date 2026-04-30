@@ -59,7 +59,6 @@ const projects: Project[] = [
 
 export default function Projects() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "Projects";
   }, []);
 

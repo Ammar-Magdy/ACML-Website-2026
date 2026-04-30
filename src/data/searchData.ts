@@ -139,6 +139,38 @@ export const searchData = [
     keywords: "projects featured samples suez elsewedy apc colas enppi",
   },
   {
+    id: "/about/projects/suez",
+    title: "SUEZ (SCA) Project",
+    description: "Maritime intelligence project for vessel movement surveillance",
+    keywords: "suez sca maritime intelligence vessel surveillance project",
+  },
+  {
+    id: "/about/projects/elsewedy",
+    title: "Elsewedy (PSP) Project",
+    description: "Digital library implementation for power systems projects",
+    keywords: "elsewedy psp digital library power systems project",
+  },
+  {
+    id: "/about/projects/alx-pc",
+    title: "APC Project",
+    description:
+      "Alexandria Petroleum Company standards project for engineering needs",
+    keywords: "apc alx pc alexandria petroleum standards engineering project",
+  },
+  {
+    id: "/about/projects/colas-rail",
+    title: "COLAS-RAIL Project",
+    description: "Multi-site standards solution for rail and metro infrastructure",
+    keywords: "colas rail metro infrastructure standards egypt project",
+  },
+  {
+    id: "/about/projects/enppi",
+    title: "ENPPI Project",
+    description:
+      "Engineering standards project for petroleum and process industries",
+    keywords: "enppi petroleum process engineering standards project",
+  },
+  {
     id: "/publishers",
     title: "Publishers",
     description: "Standards and regulations information",
