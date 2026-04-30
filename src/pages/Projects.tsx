@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Globe, Award, ExternalLink } from "lucide-react";
+import { Globe, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import suezLogo from "../assets/Photos/About/Projects/SUEZ/SUEZ_Logo.webp";
