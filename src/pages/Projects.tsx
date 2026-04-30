@@ -1,11 +1,66 @@
 import { useEffect } from "react";
-import { Globe, Award, ExternalLink, Workflow } from "lucide-react";
+import { Globe, Award, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+
+import suezLogo from "../assets/Photos/About/Projects/SUEZ/SUEZ_Logo.webp";
+import elsewedyLogo from "../assets/Photos/About/Projects/Elsewedy/Elsewedy_logo.webp";
+import apcLogo from "../assets/Photos/About/Projects/ALX-PC/ALX-PC_logo.webp";
+import colasRailLogo from "../assets/Photos/About/Projects/COLAS-RAIL/COLAS-RAIL_logo.webp";
+import enppiLogo from "../assets/Photos/About/Projects/Enppi/Enppi_Logo.webp";
+
+interface Project {
+  name: string;
+  logo: string;
+  path: string;
+  description: string;
+  logoBg?: string;
+}
+
+const projects: Project[] = [
+  {
+    name: "SUEZ (SCA)",
+    logo: suezLogo,
+    path: "/about/projects/suez",
+    description:
+      "A sophisticated maritime intelligence project supporting vessel movement surveillance and analytics.",
+  },
+  {
+    name: "Elsewedy (PSP)",
+    logo: elsewedyLogo,
+    path: "/about/projects/elsewedy",
+    description:
+      "A digital library implementation enabling power systems projects to apply international standards.",
+  },
+  {
+    name: "APC",
+    logo: apcLogo,
+    path: "/about/projects/alx-pc",
+    description:
+      "A long-running standards project for Alexandria Petroleum Company engineering and process needs.",
+    
+  },
+  {
+    name: "COLAS-RAIL",
+    logo: colasRailLogo,
+    path: "/about/projects/colas-rail",
+    description:
+      "A multi-site standards solution supporting major rail and metro infrastructure projects in Egypt.",
+    
+  },
+  {
+    name: "ENPPI",
+    logo: enppiLogo,
+    path: "/about/projects/enppi",
+    description:
+      "An engineering standards project serving petroleum and process industry requirements across projects.",
+       logoBg: "#26424A",
+  },
+];
 
 export default function Projects() {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Projects | ACML";
+    document.title = "Projects";
   }, []);
 
   return (
@@ -76,52 +131,52 @@ export default function Projects() {
               </p>
             </div>
 
-            <div id="projects-samples" className="space-y-4 scroll-mt-24">
-              <h3 className="text-xl font-semibold text-emerald-600 dark:text-emerald-400 border-b border-emerald-200 dark:border-emerald-800 pb-2">
-                Samples of main projects
-              </h3>
-              <ul className="space-y-3">
-                <li>
-                  <Link
-                    to="/about/projects/suez"
-                    className="flex items-center text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+            {/* Project card grid — 3 cols desktop / 2 tablet / 1 mobile */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projects.map((project) => (
+                <Link
+                  key={project.name}
+                  to={project.path}
+                  className="group bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-8 flex flex-col items-center text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                >
+                  {/* Logo */}
+                  <div
+                    className={`h-20 w-full flex items-center justify-center mb-6 rounded-xl px-4${project.logoBg === "#ffffff" ? " border border-gray-200 shadow-sm" : ""}`}
+                    style={
+                      project.logoBg
+                        ? { backgroundColor: project.logoBg }
+                        : undefined
+                    }
                   >
-                    <Workflow size={18} className="mr-2" /> SUEZ (SCA)
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/about/projects/elsewedy"
-                    className="flex items-center text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
-                  >
-                    <Workflow size={18} className="mr-2" /> Elsewedy (PSP)
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/about/projects/alx-pc"
-                    className="flex items-center text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
-                  >
-                    <Workflow size={18} className="mr-2" /> APC
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/about/projects/colas-rail"
-                    className="flex items-center text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
-                  >
-                    <Workflow size={18} className="mr-2" /> COLAS-RAIL
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/about/projects/enppi"
-                    className="flex items-center text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
-                  >
-                    <Workflow size={18} className="mr-2" /> ENPPI
-                  </Link>
-                </li>
-              </ul>
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={project.logo}
+                      alt={`${project.name} logo`}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+
+                  {/* Divider */}
+                  <div className="w-12 h-px bg-emerald-200 dark:bg-emerald-700 mb-5" />
+
+                  {/* Name */}
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
+                    {project.name}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-6 flex-1">
+                    {project.description}
+                  </p>
+
+                  {/* Visit link indicator */}
+                  <span className="inline-flex items-center text-sm font-semibold text-emerald-600 dark:text-emerald-400 group-hover:underline">
+                    View Project
+                    <ExternalLink size={14} className="ml-1.5" />
+                  </span>
+                </Link>
+              ))}
             </div>
           </section>
 

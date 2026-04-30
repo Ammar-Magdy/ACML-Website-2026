@@ -45,7 +45,7 @@ export default function ProjectElsewedy() {
               <div className="flex items-center justify-center inline-block">
                 <img loading="lazy" decoding="async" src={elsewedyLogo}
                   alt="Elsewedy Logo"
-                  className="h-24 md:h-32 object-contain drop-shadow-2xl rounded-3xl"
+                  className="h-22 md:h-24 object-contain drop-shadow-2xl rounded-1xl bg-white"
                 />
               </div>
             </div>

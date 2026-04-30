@@ -133,6 +133,12 @@ export const searchData = [
     keywords: "partners collaborations",
   },
   {
+    id: "/projects",
+    title: "Projects",
+    description: "Featured project samples and implementations",
+    keywords: "projects featured samples suez elsewedy apc colas enppi",
+  },
+  {
     id: "/publishers",
     title: "Publishers",
     description: "Standards and regulations information",

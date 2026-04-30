@@ -1,4 +1,4 @@
-# ACML - Alex Centre for Multimedia & Libraries
+# ACML - ACML Integrated Information Solutions & Systems
 
 Modern, professional corporate website for ACML - Your gateway to the information age.
 

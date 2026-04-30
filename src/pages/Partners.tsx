@@ -67,7 +67,7 @@ const partners: Partner[] = [
 export default function Partners() {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Partners | ACML";
+    document.title = "Partners";
   }, []);
 
   return (

@@ -392,7 +392,7 @@ export default function About() {
               <img
                 loading="lazy"
                 decoding="async"
-                src={`${import.meta.env.BASE_URL}005.jpg`}
+                src={`${import.meta.env.BASE_URL}006.webp`}
                 alt="ACML Mission"
                 className="rounded-xl shadow-2xl w-full dark:opacity-90"
               />

@@ -503,9 +503,12 @@ export default function Publishers() {
             ongoing subscriptions, our team can help you find the right solution
             for your organization.
           </p>
-          <button className="bg-white text-emerald-600 dark:text-emerald-900 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl">
-            Request Partners Information
-          </button>
+          <Link
+                to="/contact"
+                className="bg-white text-emerald-600 dark:text-emerald-900 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                Request Partners Information
+              </Link>
         </div>
       </section>
     </div>
