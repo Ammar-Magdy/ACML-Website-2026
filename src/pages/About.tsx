@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import image006 from "../../public/006.webp";
 
 export default function About() {
   const location = useLocation();
@@ -392,7 +393,7 @@ export default function About() {
               <img
                 loading="lazy"
                 decoding="async"
-                src={`${import.meta.env.BASE_URL}006.webp`}
+                src={image006}
                 alt="ACML Mission"
                 className="rounded-xl shadow-2xl w-full dark:opacity-90"
               />
