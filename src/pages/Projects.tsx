@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { Globe, ExternalLink } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Globe, ExternalLink, FileText, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import suezLogo from "../assets/Photos/About/Projects/SUEZ/SUEZ_Logo.webp";
@@ -7,6 +7,9 @@ import elsewedyLogo from "../assets/Photos/About/Projects/Elsewedy/Elsewedy_logo
 import apcLogo from "../assets/Photos/About/Projects/ALX-PC/ALX-PC_logo.webp";
 import colasRailLogo from "../assets/Photos/About/Projects/COLAS-RAIL/COLAS-RAIL_logo.webp";
 import enppiLogo from "../assets/Photos/About/Projects/Enppi/Enppi_Logo.webp";
+import accurisLogo from "../assets/Photos/Publishers/Accuris/Logo.webp";
+import awardProof from "../assets/Photos/Partners/award_proof.webp";
+import awardPdf from "../assets/PDF/Partners/ACML-2I2S BEST-PERFORMANCE-ACCURIS-CHANNEL PARTNER 2025.pdf";
 
 interface Project {
   name: string;
@@ -59,9 +62,24 @@ const projects: Project[] = [
 ];
 
 export default function Projects() {
+  const [isAwardModalOpen, setIsAwardModalOpen] = useState(false);
+
   useEffect(() => {
     document.title = "Projects";
   }, []);
+
+  useEffect(() => {
+    if (!isAwardModalOpen) {
+      return;
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isAwardModalOpen]);
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-20 transition-colors duration-300">
@@ -176,6 +194,69 @@ export default function Projects() {
             </div>
           </section>
 
+          {/* ── Award Recognition Section ────────────────────────── */}
+          <section className="mb-16">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden">
+              <div className="grid md:grid-cols-3">
+                <div className=" p-10 flex flex-col items-center justify-center text-center">
+                  <div className="w-full h-full rounded-2xl bg-white/90 flex items-center justify-center mb-6 shadow-inner px-4 py-3">
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={accurisLogo}
+                      alt="Accuris logo"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm font-medium uppercase tracking-widest">
+                    Award Recognition
+                  </p>
+                </div>
+
+                <div className="md:col-span-2 p-10 flex flex-col justify-center">
+                  <p className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest mb-4">
+                    Awarded by Accuris
+                  </p>
+
+                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-5 leading-snug">
+                    Best Performing Channel Partner Worldwide
+                    <span className="block text-emerald-600 dark:text-emerald-400 mt-1">
+                      Recognised in 2026 for FY2025 Performance
+                    </span>
+                  </h2>
+
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-8 max-w-xl">
+                    ACML 2I2S was officially recognised by Accuris as the
+                    top-performing channel partner worldwide based on FY2025
+                    sales performance results. This achievement reflects our
+                    long-standing commitment to delivering high-value technical
+                    intelligence, standards, and trusted industry solutions
+                    across the region.
+                  </p>
+
+                  <div className="flex flex-wrap gap-4">
+                    <button
+                      type="button"
+                      onClick={() => setIsAwardModalOpen(true)}
+                      className="inline-flex items-center bg-emerald-600 text-white hover:bg-emerald-700 px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-md"
+                    >
+                      Learn More
+                    </button>
+                    <a
+                      href="https://www.accuristech.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-semibold transition-colors"
+                    >
+                      Visit Accuris
+                      <ExternalLink size={14} className="ml-1.5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* ── CTA Section ─────────────────────────────────────── */}
           <section className="mb-8">
             <div className="bg-emerald-50 dark:bg-emerald-900/20 rounded-2xl shadow-sm p-10 border border-emerald-100 dark:border-emerald-800 text-center">
@@ -197,6 +278,119 @@ export default function Projects() {
           </section>
         </div>
       </div>
+
+      {isAwardModalOpen && (
+        <div
+          className="fixed inset-0 z-50 bg-black/60 p-4 sm:p-6 flex items-start sm:items-center justify-center"
+          onClick={() => setIsAwardModalOpen(false)}
+        >
+          <div
+            className="w-full max-w-5xl max-h-[90vh] overflow-y-auto bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="flex items-center justify-between px-6 sm:px-8 py-5 border-b border-gray-100 dark:border-gray-800">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
+                Official Verification
+              </h3>
+              <button
+                type="button"
+                onClick={() => setIsAwardModalOpen(false)}
+                className="inline-flex items-center justify-center w-9 h-9 rounded-full text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                aria-label="Close verification modal"
+              >
+                <X size={18} />
+              </button>
+            </div>
+
+            <div className="px-6 sm:px-8 py-6 sm:py-8 space-y-8">
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                Verified by official Accuris communication dated 12 February
+                2026, confirming that ACML 2I2S was the 2025 top sales
+                performer among all channel partners worldwide.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="rounded-xl border border-emerald-100 dark:border-emerald-900/60 bg-emerald-50/60 dark:bg-emerald-900/20 p-4">
+                  <p className="text-xs uppercase tracking-wider text-emerald-700 dark:text-emerald-300 mb-1">
+                    Rank
+                  </p>
+                  <p className="text-lg font-bold text-emerald-800 dark:text-emerald-200">
+                    #1 Worldwide
+                  </p>
+                </div>
+                <div className="rounded-xl border border-emerald-100 dark:border-emerald-900/60 bg-emerald-50/60 dark:bg-emerald-900/20 p-4">
+                  <p className="text-xs uppercase tracking-wider text-emerald-700 dark:text-emerald-300 mb-1">
+                    Performance Attainment
+                  </p>
+                  <p className="text-lg font-bold text-emerald-800 dark:text-emerald-200">
+                    252%
+                  </p>
+                </div>
+                <div className="rounded-xl border border-emerald-100 dark:border-emerald-900/60 bg-emerald-50/60 dark:bg-emerald-900/20 p-4">
+                  <p className="text-xs uppercase tracking-wider text-emerald-700 dark:text-emerald-300 mb-1">
+                    FY25 Target
+                  </p>
+                  <p className="text-lg font-bold text-emerald-800 dark:text-emerald-200">
+                    226,791
+                  </p>
+                </div>
+                <div className="rounded-xl border border-emerald-100 dark:border-emerald-900/60 bg-emerald-50/60 dark:bg-emerald-900/20 p-4">
+                  <p className="text-xs uppercase tracking-wider text-emerald-700 dark:text-emerald-300 mb-1">
+                    Won Value
+                  </p>
+                  <p className="text-lg font-bold text-emerald-800 dark:text-emerald-200">
+                    572,228
+                  </p>
+                </div>
+              </div>
+
+              <section>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                  Email Proof Snapshot
+                </h4>
+                <div className="rounded-2xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/70 p-2 sm:p-3 shadow-sm">
+                  <img
+                    loading="lazy"
+                    decoding="async"
+                    src={awardProof}
+                    alt="Accuris award proof snapshot"
+                    className="w-full h-auto rounded-xl object-contain"
+                  />
+                </div>
+              </section>
+
+              <section>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                  Supporting Document
+                </h4>
+                <div className="rounded-xl border border-gray-200 dark:border-gray-700 p-4 sm:p-5 bg-white dark:bg-gray-800 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                  <div className="flex items-center gap-3 min-w-0">
+                    <div className="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 flex items-center justify-center flex-shrink-0">
+                      <FileText size={20} />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="font-semibold text-gray-900 dark:text-white truncate">
+                        Accuris Channel Partner Recognition
+                      </p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400 truncate">
+                        Official supporting PDF
+                      </p>
+                    </div>
+                  </div>
+                  <a
+                    href={awardPdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center bg-emerald-600 text-white hover:bg-emerald-700 px-5 py-2.5 rounded-lg font-semibold transition-colors"
+                  >
+                    View Recognition PDF
+                  </a>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
