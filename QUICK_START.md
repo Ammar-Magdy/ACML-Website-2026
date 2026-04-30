@@ -1,113 +1,64 @@
-# Quick Start Guide
+# Quick Start
 
-## For Developers
+## Local development
 
-### 1. Install Dependencies
+### 1. Install dependencies
+
 ```bash
 npm install
 ```
 
-### 2. Run Development Server
+### 2. Start the dev server
+
 ```bash
 npm run dev
 ```
 
-Visit: http://localhost:5173
+Open `http://localhost:5173`.
 
-### 3. Build for Production
+### 3. Build production files
+
 ```bash
 npm run build
 ```
 
-Files will be in the `dist` folder.
+Output is generated in `dist\`.
 
-## For Deployment to InterServer
+### 4. Preview the production build
 
-### Simple 3-Step Process:
-
-**Step 1: Build**
 ```bash
-npm run build
+npm run preview
 ```
 
-**Step 2: Upload**
-- Log into cPanel
-- Open File Manager
-- Go to `public_html`
-- Upload ALL files from the `dist` folder
+## Useful commands
 
-**Step 3: Add .htaccess**
-- Copy the `.htaccess` file to your `public_html` directory
-- Or create a new file named `.htaccess` and paste the content from the `.htaccess` file in this project
-
-Done! Visit your domain.
-
-## Project Structure
-
-```
-├── dist/                    # Production build (upload this to hosting)
-├── src/
-│   ├── components/         # Reusable components
-│   │   ├── Header.tsx     # Navigation
-│   │   └── Footer.tsx     # Footer
-│   ├── pages/             # All page components
-│   │   ├── Home.tsx
-│   │   ├── About.tsx
-│   │   ├── Services.tsx
-│   │   ├── Partners.tsx
-│   │   ├── Standards.tsx
-│   │   └── Contact.tsx
-│   └── App.tsx            # Main app
-├── public/                # Images (automatically copied to dist)
-└── index.html             # HTML template
-
+```bash
+npm run lint
+npm run typecheck
+npm run deploy
 ```
 
-## Key Features
+- `lint`: runs ESLint
+- `typecheck`: runs TypeScript checking
+- `deploy`: publishes `dist\` to GitHub Pages
 
-- **6 Pages**: Home, About, Services, Partners, Standards, Contact
-- **Fully Responsive**: Works on all devices
-- **Modern Design**: Clean, professional corporate style
-- **SEO Optimized**: Proper meta tags and semantic HTML
-- **Fast Loading**: Optimized assets and code splitting
+## Deploy in 3 steps (shared hosting)
 
-## Making Changes
+1. Run `npm run build`
+2. Upload everything from `dist\` to your web root (for example `public_html`)
+3. Add SPA rewrite rules so routes resolve to `index.html`
 
-1. Edit files in `src/` folder
-2. Save changes (dev server auto-reloads)
-3. When ready, run `npm run build`
-4. Upload new `dist` files to hosting
+For full hosting details and `.htaccess` examples, use `DEPLOYMENT.md`.
 
-## Common Tasks
+## Where to edit
 
-### Update Content
-Edit the respective page file in `src/pages/`
+- Routes: `src\App.tsx`
+- Header navigation: `src\components\Header.tsx`
+- Footer/contact details: `src\components\Footer.tsx` and `src\pages\Contact.tsx`
+- Theme logic: `src\context\ThemeContext.tsx`
+- Main pages and feature pages: `src\pages\`
 
-### Change Colors
-Find and replace Tailwind color classes:
-- `emerald-600` → your color
-- `emerald-700` → your darker shade
+## Notes
 
-### Add/Remove Pages
-1. Create/delete file in `src/pages/`
-2. Update `src/App.tsx` to include the new route
-3. Update `src/components/Header.tsx` navigation
-4. Update `src/components/Footer.tsx` if needed
-
-### Update Contact Info
-Edit:
-- `src/components/Footer.tsx`
-- `src/pages/Contact.tsx`
-
-### Replace Images
-Put new images in `public/` folder and update the image paths in the page components.
-
-## Need Help?
-
-See full documentation:
-- `README.md` - Complete project documentation
-- `DEPLOYMENT.md` - Detailed deployment guide
-
-## Support
-
-Contact: info@acml-egypt.com
+- GitHub Pages base path is configured in `vite.config.ts` (`/ACML-Website-2026/`).
+- Router basename is already wired to `import.meta.env.BASE_URL`.
