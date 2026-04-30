@@ -124,11 +124,7 @@ export default function Projects() {
                 </div>
                 Featured Projects
               </h2>
-              <p className="text-gray-600 dark:text-gray-300 max-w-2xl ml-14">
-                We lead sophisticated projects with over 30 years of experience.
-                We design, analyze, create, and implement pioneering projects.
-                We handle a wide range of related project samples.
-              </p>
+            
             </div>
 
             {/* Project card grid — 3 cols desktop / 2 tablet / 1 mobile */}
@@ -177,62 +173,6 @@ export default function Projects() {
                   </span>
                 </Link>
               ))}
-            </div>
-          </section>
-
-          {/* ── Award Recognition Section ────────────────────────── */}
-          <section className="mb-16">
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden">
-              <div className="grid md:grid-cols-3">
-                {/* Left accent column */}
-                <div className="bg-emerald-600 dark:bg-emerald-700 p-10 flex flex-col items-center justify-center text-center">
-                  <div className="w-20 h-20 rounded-full bg-white/15 flex items-center justify-center mb-6 shadow-inner">
-                    <Award size={38} className="text-white" />
-                  </div>
-                  <p className="text-white/80 text-sm font-medium uppercase tracking-widest">
-                    Award Recognition
-                  </p>
-                </div>
-
-                {/* Right content column */}
-                <div className="md:col-span-2 p-10 flex flex-col justify-center">
-                  <p className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest mb-4">
-                    Awarded by Accuris
-                  </p>
-
-                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-5 leading-snug">
-                    Best Performing Channel Partner Worldwide
-                    <span className="block text-emerald-600 dark:text-emerald-400 mt-1">
-                      2026
-                    </span>
-                  </h2>
-
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-8 max-w-xl">
-                    ACML has been recognised by Accuris as the best performing
-                    channel partner worldwide for 2026 — a testament to our
-                    commitment to delivering premium technical intelligence and
-                    standards to institutions across the region.
-                  </p>
-
-                  <div className="flex flex-wrap gap-4">
-                    <Link
-                      to="/contact"
-                      className="inline-flex items-center bg-emerald-600 text-white hover:bg-emerald-700 px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-md"
-                    >
-                      Learn More
-                    </Link>
-                    <a
-                      href="https://www.accuristech.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-semibold transition-colors"
-                    >
-                      Visit Accuris
-                      <ExternalLink size={14} className="ml-1.5" />
-                    </a>
-                  </div>
-                </div>
-              </div>
             </div>
           </section>
 
