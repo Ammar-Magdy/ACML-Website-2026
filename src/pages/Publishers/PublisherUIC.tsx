@@ -14,7 +14,6 @@ import uicVideo from "../../assets/Videos/Publishers/UIC/UIC.mp4";
 
 export default function PublisherUIC() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "UIC";
   }, []);
 

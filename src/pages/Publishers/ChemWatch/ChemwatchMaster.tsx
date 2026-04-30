@@ -7,7 +7,6 @@ import chemLogo from "../../../assets/Photos/Publishers/ChemWatch/logo.webp";
 
 export default function ChemWatchMaster() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "ChemWatch";
   }, []);
 

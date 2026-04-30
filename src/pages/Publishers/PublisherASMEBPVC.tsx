@@ -10,7 +10,6 @@ const BRAND = "#00A5D8";
 
 const PublisherASMEBPVC: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "ASME BPVC";
   }, []);
 

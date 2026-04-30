@@ -10,7 +10,6 @@ const VIDEO_OVERLAY = "#25B9E4";
 
 const PublisherSAE: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "SAE";
   }, []);
 

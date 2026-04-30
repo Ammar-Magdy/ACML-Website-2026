@@ -28,10 +28,8 @@ export default function PublisherACM() {
       if (el) {
         setTimeout(() => el.scrollIntoView({ behavior: "smooth" }), 100);
       } else {
-        window.scrollTo(0, 0);
       }
     } else {
-      window.scrollTo(0, 0);
     }
   }, [location]);
 

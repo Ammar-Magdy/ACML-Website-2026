@@ -9,7 +9,6 @@ const BRAND = "#853282";
 
 export default function PublisherJaypee() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "Jaypee";
   }, []);
 

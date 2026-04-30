@@ -1,4 +1,4 @@
-﻿import { useEffect } from "react";
+import { useEffect } from "react";
 import { ExternalLink, PenTool, Layout } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -10,7 +10,6 @@ const DARK = "#7a5a00";
 
 export default function PublisherDemco() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "Demco";
   }, []);
 

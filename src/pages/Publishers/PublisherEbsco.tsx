@@ -657,7 +657,6 @@ const databases = [
 
 export default function PublisherEbsco() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "EBSCO Information Services";
   }, []);
 

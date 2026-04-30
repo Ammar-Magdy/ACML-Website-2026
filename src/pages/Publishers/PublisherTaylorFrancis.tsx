@@ -65,7 +65,6 @@ const products = [
 
 export default function PublisherTaylorFrancis() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "Taylor & Francis";
   }, []);
 

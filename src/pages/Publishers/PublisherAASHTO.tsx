@@ -10,7 +10,6 @@ const BRAND = "#284466";
 
 const PublisherAASHTO: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "AASHTO";
   }, []);
 

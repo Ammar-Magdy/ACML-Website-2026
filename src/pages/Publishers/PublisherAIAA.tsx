@@ -16,7 +16,6 @@ import aiaaVideo from "../../assets/Videos/Publishers/AIAA/AIAA.mp4";
 
 export default function PublisherAIAA() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "AIAA";
   }, []);
 

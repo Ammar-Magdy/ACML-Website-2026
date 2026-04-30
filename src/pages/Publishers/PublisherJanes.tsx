@@ -16,7 +16,6 @@ import img17 from "../../assets/Photos/Publishers/Janes/Janes_Page_10_Image_0002
 
 export default function PublisherJanes() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "Janes";
   }, []);
 

@@ -10,7 +10,6 @@ const VIDEO_OVERLAY = "#120D61";
 
 const PublisherAIP: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "AIP";
   }, []);
 

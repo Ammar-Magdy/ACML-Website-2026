@@ -17,7 +17,6 @@ import suezPhotoC from "../../assets/Photos/About/Projects/SUEZ/c.webp";
 
 export default function ProjectSUEZ() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "SUEZ Canal Authority";
   }, []);
 

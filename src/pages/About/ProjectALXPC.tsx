@@ -17,7 +17,6 @@ import alxpcPhotoD from "../../assets/Photos/About/Projects/ALX-PC/d.webp";
 
 export default function ProjectALXPC() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "ALX-PC (APC)";
   }, []);
 

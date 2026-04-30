@@ -11,7 +11,6 @@ const VIDEO_OVERLAY = "#F5F4F1";
 
 const PublisherACI: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "ACI";
   }, []);
 

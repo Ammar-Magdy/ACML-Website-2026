@@ -1,4 +1,4 @@
-﻿import { useEffect } from "react";
+import { useEffect } from "react";
 import { Zap } from "lucide-react";
 
 import chemLogo from "../../../assets/Photos/Publishers/ChemWatch/logo.webp";
@@ -16,7 +16,6 @@ import imgAaas from "../../../assets/Photos/Publishers/ChemWatch/Smart-AaaS-app.
 
 export default function ChemArabic() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "ChemWatch";
   }, []);
 

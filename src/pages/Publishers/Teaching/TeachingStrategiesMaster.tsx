@@ -6,7 +6,6 @@ import faviconImg from "./ms-icon-144x144.webp";
 import { useEffect } from "react";
 export default function TeachingStrategiesMaster() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "Teaching Strategies";
   }, []);
 

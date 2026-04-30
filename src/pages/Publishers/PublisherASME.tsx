@@ -12,7 +12,6 @@ const VIDEO_OVERLAY = "#00A5D8";
 
 const PublisherASME: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "ASME";
   }, []);
 

@@ -10,7 +10,6 @@ const BRAND = "#D40031";
 
 const PublisherNFPA: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "NFPA";
   }, []);
 

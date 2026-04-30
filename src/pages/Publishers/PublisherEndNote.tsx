@@ -16,7 +16,6 @@ const BRAND = "#202124";
 
 export default function PublisherEndNote() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "EndNote";
   }, []);
 

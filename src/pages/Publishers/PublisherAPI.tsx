@@ -9,7 +9,6 @@ const BRAND = "#17457A";
 
 const PublisherAPI: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "API";
   }, []);
 

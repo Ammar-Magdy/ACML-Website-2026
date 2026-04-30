@@ -16,7 +16,6 @@ const BRAND = "#00A499";
 
 const PublisherSIAM: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "SIAM";
   }, []);
 

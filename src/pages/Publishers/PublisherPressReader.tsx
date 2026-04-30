@@ -9,7 +9,6 @@ const BRAND = "#486058ff";
 
 export default function PublisherPressReader() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "PressReader";
   }, []);
 

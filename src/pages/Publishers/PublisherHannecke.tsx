@@ -9,7 +9,6 @@ const BRAND = "#D42127";
 
 const PublisherHannecke: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "Hannecke";
   }, []);
 

@@ -26,7 +26,6 @@ import jetImg from "../../assets/Photos/Publishers/Haystack-Gold/AdobeStock_4079
 
 const PublisherHaystackGold = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "Haystack Gold";
   }, []);
 

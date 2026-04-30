@@ -80,7 +80,6 @@ const ejournalsSpecialties = [
 
 const PublisherThieme: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "Thieme";
   }, []);
 

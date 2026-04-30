@@ -1,4 +1,4 @@
-﻿import { useEffect } from "react";
+import { useEffect } from "react";
 import { Archive, Clock, Lightbulb, Box, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -7,7 +7,6 @@ import gaylordVideo from "../../assets/Videos/Publishers/Gaylord-Archival/Gaylor
 
 export default function PublisherGaylord() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "Gaylord";
   }, []);
 

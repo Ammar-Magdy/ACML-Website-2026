@@ -16,7 +16,6 @@ import enppiPhotoC from "../../assets/Photos/About/Projects/Enppi/c.webp";
 
 export default function ProjectEnppi() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "Enppi";
   }, []);
 

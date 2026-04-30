@@ -25,7 +25,6 @@ const contentIncludes = [
 
 const PublisherEBSCOMilitary: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "EBSCO Military";
   }, []);
 

@@ -7,7 +7,6 @@ import gttBg from "../../assets/Photos/Publishers/Global-Trade-Tracker/Backgroun
 
 export default function PublisherGlobalTradeTracker() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "Global Trade Tracker";
   }, []);
 

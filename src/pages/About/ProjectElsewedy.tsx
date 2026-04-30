@@ -16,7 +16,6 @@ import elsewedyPhotoC from "../../assets/Photos/About/Projects/Elsewedy/c.webp";
 
 export default function ProjectElsewedy() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "Elsewedy PSP";
   }, []);
 

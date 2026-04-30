@@ -7,7 +7,6 @@ import locBg from "../../assets/Photos/Publishers/Library-of-Congress/Background
 
 export default function PublisherLibraryOfCongress() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "Library of Congress";
   }, []);
 

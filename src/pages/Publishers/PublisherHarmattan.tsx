@@ -76,7 +76,6 @@ const categories = [
 
 export default function PublisherHarmattan() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "L'Harmattan";
   }, []);
 

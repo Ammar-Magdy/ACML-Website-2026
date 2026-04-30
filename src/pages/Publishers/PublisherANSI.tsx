@@ -9,7 +9,6 @@ const BRAND = "#0075BF";
 
 const PublisherANSI: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "ANSI";
   }, []);
 

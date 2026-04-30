@@ -9,7 +9,6 @@ const BRAND = "#00519F";
 
 const PublisherASNT: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "ASNT";
   }, []);
 

@@ -14,7 +14,6 @@ import img024 from "../../assets/Photos/Publishers/ASTM-PTP/Image_024.webp";
 
 export default function PublisherASTMPTP() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "ASTM PTP";
   }, []);
 

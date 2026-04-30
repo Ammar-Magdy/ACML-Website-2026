@@ -10,7 +10,6 @@ const VIDEO_OVERLAY = "#0F172A";
 
 const PublisherStandardsSocieties = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "Standards & Societies";
   }, []);
 

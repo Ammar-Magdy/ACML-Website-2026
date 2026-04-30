@@ -11,7 +11,6 @@ import iprImage005 from "../../assets/Photos/Publishers/IPR/image005.webp";
 
 export default function PublisherIPR() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "IPR";
   }, []);
 

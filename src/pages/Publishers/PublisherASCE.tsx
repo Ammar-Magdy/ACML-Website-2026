@@ -15,7 +15,6 @@ const VIDEO_OVERLAY = "#1F4D83";
 
 const PublisherASCE: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "ASCE";
   }, []);
 

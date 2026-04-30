@@ -733,4 +733,5 @@ export const restoration = [
 
 export const managementArchives = [
   { name: "Sohag Chamber of Commerce", year: "2014", country: "Egypt" },
+  { name: "Dr Hossam Lotfy For Legal Consultation", year: "2018", country: "Egypt" },
 ];

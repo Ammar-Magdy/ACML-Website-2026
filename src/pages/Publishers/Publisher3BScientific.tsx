@@ -141,7 +141,6 @@ const colorMap: Record<string, string> = {
 
 export default function Publisher3BScientific() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "3B Scientific";
   }, []);
 

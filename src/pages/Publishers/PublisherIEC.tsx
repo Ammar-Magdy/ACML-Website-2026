@@ -6,7 +6,6 @@ import iecLogo from "../../assets/Photos/Publishers/IEC/logo.svg";
 import iecVideo from "../../assets/Videos/Publishers/IEC/IEC.mp4";
 export default function PublisherIEC() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "IEC";
   }, []);
 

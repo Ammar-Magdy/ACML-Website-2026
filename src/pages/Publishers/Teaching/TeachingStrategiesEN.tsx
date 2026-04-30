@@ -39,7 +39,6 @@ import { useEffect } from "react";
 
 export default function TeachingStrategiesEN() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "Teaching Strategies";
   }, []);
 

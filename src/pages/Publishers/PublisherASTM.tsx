@@ -11,7 +11,6 @@ const VIDEO_OVERLAY = "#021740";
 
 const PublisherASTM: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "ASTM";
   }, []);
 

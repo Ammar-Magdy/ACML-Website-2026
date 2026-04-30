@@ -7,7 +7,6 @@ import heinBg from "../../assets/Photos/Publishers/HeinOnline/Background.webp";
 
 export default function PublisherHeinOnline() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "HeinOnline";
   }, []);
 

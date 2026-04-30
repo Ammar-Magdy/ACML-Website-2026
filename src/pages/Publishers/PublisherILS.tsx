@@ -16,7 +16,6 @@ import ilsImg from "../../assets/Photos/Publishers/ILS/ils.webp";
 
 export default function PublisherILS() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "ILS";
   }, []);
 

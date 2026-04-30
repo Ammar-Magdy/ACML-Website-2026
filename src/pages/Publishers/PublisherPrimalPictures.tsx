@@ -31,7 +31,6 @@ const packages = [
 
 export default function PublisherPrimalPictures() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "Primal Pictures";
   }, []);
 

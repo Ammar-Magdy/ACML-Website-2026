@@ -30,6 +30,7 @@ const projects: Project[] = [
     path: "/about/projects/elsewedy",
     description:
       "A digital library implementation enabling power systems projects to apply international standards.",
+      logoBg: "#ffffff",
   },
   {
     name: "APC",
@@ -37,7 +38,7 @@ const projects: Project[] = [
     path: "/about/projects/alx-pc",
     description:
       "A long-running standards project for Alexandria Petroleum Company engineering and process needs.",
-    
+    logoBg: "#ffffff",
   },
   {
     name: "COLAS-RAIL",

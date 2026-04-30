@@ -15,7 +15,6 @@ import colasPhotoB from "../../assets/Photos/About/Projects/COLAS-RAIL/b.webp";
 
 export default function ProjectCOLASRAIL() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "COLAS-RAIL Metro Projects";
   }, []);
 

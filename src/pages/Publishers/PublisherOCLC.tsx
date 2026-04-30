@@ -28,7 +28,6 @@ import webdeweyImg from "../../assets/Photos/Publishers/OCLC/OCLC-Webdewey/OCLC-
 
 export default function PublisherOCLC() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "OCLC";
   }, []);
 

@@ -9,7 +9,6 @@ import icaoImg2 from "../../assets/Photos/Publishers/ICAO/icao-2webp.webp";
 
 export default function PublisherICAO() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "ICAO";
   }, []);
 

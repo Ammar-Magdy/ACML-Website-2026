@@ -185,7 +185,6 @@ const institutionBenefits = [
 
 export default function PublisherBloomsbury() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "Bloomsbury";
   }, []);
 

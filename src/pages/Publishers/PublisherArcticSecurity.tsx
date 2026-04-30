@@ -10,7 +10,6 @@ const DARK = "#006d8c";
 
 const PublisherArcticSecurity: React.FC = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "Arctic Security";
   }, []);
 

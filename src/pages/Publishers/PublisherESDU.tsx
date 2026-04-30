@@ -15,7 +15,6 @@ import esduImg from "../../assets/Photos/Publishers/ESDU/ESDU.webp";
 
 export default function PublisherESDU() {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = "ESDU";
   }, []);
 
