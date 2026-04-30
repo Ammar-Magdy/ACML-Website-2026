@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import sscgPdf from "../../../assets/PDF/About/Donations/SSCG-winners-full-details-1992_2025.pdf";
 import kwiPdf from "../../../assets/PDF/About/Donations/KWI-ASRT-SS.pdf";
 import ielPdf from "../../../assets/PDF/About/Donations/Ideal-Egyptian-Librarian-(IEL).pdf";
+import ielterms from "../../../assets/PDF/About/Donations/Terms&Conditions.pdf";
 import { useEffect } from "react";
 
 export default function DonationsGrantsMaster() {
@@ -97,7 +98,7 @@ export default function DonationsGrantsMaster() {
                       className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 inline-flex items-center gap-2 text-sm"
                     >
                       <ExternalLink size={16} />
-                      IFLA SSCG Grant
+                      IFLA SSCG Grant Application
                     </a>
                   </div>
                 </div>
@@ -184,6 +185,17 @@ export default function DonationsGrantsMaster() {
                   >
                     <FileText size={16} />
                     View PDF Document
+                  </a>
+
+                  <a 
+                    href={`${ielterms}#view=FitH`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    type="application/pdf"
+                    className="text-teal-600 dark:text-teal-400 font-medium hover:text-teal-700 dark:hover:text-teal-300 inline-flex items-center gap-2 mt-2 ml-4 "
+                  >
+                    <FileText size={16} />
+                    Terms of Reference for the Ideal Egyptian Librarian Award (IEL)
                   </a>
                 </div>
               </div>

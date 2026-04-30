@@ -17,7 +17,7 @@ export default function DrShawkyGrant() {
             Dr. Shawky Salem Grant
           </h1>
           <p className="text-xl max-w-3xl mx-auto text-emerald-100">
-            IFLA Conference Attendance (SSCA) For Arab Librarians
+            IFLA Conference Attendance (SSCG) For Arab Librarians
           </p>
         </div>
       </section>
@@ -31,9 +31,11 @@ export default function DrShawkyGrant() {
               className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 text-right"
               dir="rtl"
             >
-              <div className="flex items-center justify-end gap-4 mb-6 border-b border-gray-200 dark:border-gray-700 pb-4">
+              <div className="flex items-center justify-end gap-4 mb-6 border-b border-gray-200 dark:border-gray-700 pb-4"
+              dir="rtl"
+              >
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                  جائزة الدكتور شوقي سالم لأخصائي المكتبات العرب
+               جائزة الدكتور شوقي سالم لحضور مؤتمر الاتحاد الدولي للمكتبات (إفلا) 
                 </h2>
                 <div className="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center">
                   <Award
@@ -51,13 +53,15 @@ export default function DrShawkyGrant() {
                 <p className="font-bold text-lg text-emerald-700 dark:text-emerald-400 mb-4">
                   "جائزة الدكتور شوقي سالم لأخصائي المكتبات والمعلومات العرب"
                 </p>
+
+                <h2 className="text-red-600 dark:text-red-400 text-xl font-semibold text-center">
+                  لحضور المؤتمر السنوي للاتحاد الدولي للمكتبات (إفلا)
+                </h2>
+
                 <p className="mb-4">
-                  لحضور المؤتمر السنوي للاتحاد الدولي للمكتبات (إفلا).
-                </p>
-                <p className="mb-4">
-                  ويجدر الذكر أن الجائزة منشأة منذ عام 1993 وقد فاز بها اشخاص من
+                  ويجدر الذكر أن الجائزة منشأة منذ عام 1992 وقد فاز بها اشخاص من
                   الدول العربية من جنسيات مختلفة (مصر – السودان – لبنان – فلسطين
-                  – الأردن – الكويت – الإمارات العربية المتحدة- البحرين) .
+                  – الأردن – الكويت – الإمارات العربية المتحدة- البحرين... الخ) .
                 </p>
                 <p className="mb-4">
                   ويقوم الاتحاد الدولي للمكتبات (إفلا) بعقد مؤتمر صحفي أثناء
@@ -67,7 +71,7 @@ export default function DrShawkyGrant() {
                 <p className="mb-6">
                   ويدعو الاتحاد الدولي للمكتبات (إفلا) المهنيين العرب إلى
                   الاستفادة من وجود هذه الجائزة الدائمة، والتقدم لها كل عام قبل
-                  الموعد المحدد لانتهاء التقدم وهو نهاية يناير من كل عام.
+                  الموعد المحدد لانتهاء التقدم وهو نهاية مارس من كل عام.
                 </p>
 
                 <a
@@ -93,18 +97,18 @@ export default function DrShawkyGrant() {
                   />
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                  Dr. Shawky Salem Grant
+                  Dr. Shawky Salem Confernce Grant (SSCG) - for Arab Librarians
                 </h2>
               </div>
 
               <div className="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 leading-relaxed">
                 <h3 className="text-xl font-semibold mb-4 text-blue-700 dark:text-blue-400">
-                  IFLA Conference Attendance (SSCA) For Arab Librarians
+                  IFLA Conference Attendance (SSCG) For Arab Librarians
                 </h3>
                 <p className="mb-4">
                   The International Federation for Library Associations &
                   Institutions (IFLA) will announce every year the winner of the
-                  Grant named "<strong>(SSCA)</strong>", aimed to attend the
+                  Grant named "<strong>(SSCG)</strong>", aimed to attend the
                   annual conference of The International Federation for Library
                   Associations & Institutions (IFLA).
                 </p>
@@ -120,10 +124,10 @@ export default function DrShawkyGrant() {
                 </p>
                 <p className="mb-6">
                   It also should be mentioned that this Grant is organized since
-                  1993 and applicants from the Arab countries of different
+                  1992 and applicants from the Arab countries of different
                   nationalities has won it so far
                   (Egypt-Sudan-Lebanon-Palestine-Jordan-Kuwait-United Arab
-                  Emirates-Bahrain).
+                  Emirates-Bahrain ...etc).
                 </p>
 
                 <a
@@ -134,7 +138,7 @@ export default function DrShawkyGrant() {
                   className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-bold"
                 >
                   <FileText size={18} />
-                  Winners OF IFLA Shawky Salem Conference Attending Grant (SSCA)
+                  Winners OF IFLA Shawky Salem Conference Attending Grant (SSCG)
                 </a>
               </div>
             </div>

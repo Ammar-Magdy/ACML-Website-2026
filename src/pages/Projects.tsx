@@ -140,7 +140,7 @@ export default function Projects() {
                 <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center text-emerald-600 dark:text-emerald-400 mr-4 flex-shrink-0">
                   <Globe size={20} />
                 </div>
-                Featured Projects
+                Featured Projects - Samples
               </h2>
             
             </div>

@@ -58,10 +58,10 @@ export default function KMIGrant() {
                   تم الأتفاق مع أكاديمية البحث العلمي والتكنولوجيا في جمهورية
                   مصر العربية علي إنشاء جائزة سنوية باسم:
                 </p>
-                <p className="text-xl font-bold text-purple-800 dark:text-purple-300 mb-2">
+                <p className="text-xl font-bold text-purple-800 dark:text-purple-300 mb-2 mx-auto text-center">
                   جائزة الأستاذ الدكتور شوقي سالم
                 </p>
-                <p className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-6">
+                <p className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4 mx-auto text-center">
                   في مجال ادارة المعرفة والمعلوماتية
                 </p>
 
@@ -72,14 +72,14 @@ export default function KMIGrant() {
                     مجالات التخصص المتعددة
                   
                   كل عام ، وأصبحت الجائزة متاحة للمهنيين المصريين منذ انشائها ،
-                  وهذه دعوة لهم للتقدم لها في أكتوبر من كل عام، وتقوم لجنة تحكيم
+                  وهذه دعوة لهم للتقدم لها في نوفمبر من كل عام، وتقوم لجنة تحكيم
                   منشأة من قبل الأكاديمية بتحكيم الطلبات المقدمة للجائزة لإختيار
                   الفائز.
                 </p>
 
                 <div className="bg-gray-50 dark:bg-gray-900/50 rounded-xl p-6 mb-8 border border-gray-100 dark:border-gray-700">
                   <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
-                    1. المجالات الرئيسية لجائزة وتخصصات المتقدمين لها:
+                    1. المجالات الرئيسية للجائزة وتخصصات المتقدمين لها:
                   </h3>
                   <ul className="space-y-2 pr-4 list-decimal list-inside">
                     <li>تكنولوجيا المعلومات.</li>

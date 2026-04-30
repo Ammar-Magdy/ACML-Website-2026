@@ -80,7 +80,7 @@ export default function ProjectElsewedy() {
             <div className="md:col-span-2">
               {/* About Section */}
               <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-8 border border-gray-100 dark:border-gray-700 mb-8">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                <h2 className="text-2xl font-bold text-red-600 dark:text-red-400 mb-6 flex items-center">
                   <div className="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 mr-4">
                     <Globe size={20} />
                   </div>

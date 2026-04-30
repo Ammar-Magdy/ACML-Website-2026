@@ -228,9 +228,27 @@ const donationsData = [
     type: ["Databases"],
     value: ["$15,300.00"],
   },
+  {
+    organization: "University of Cairo - Faculty of Arts - Department of Library and Information Science",
+    subject: "Hardware & Software",
+    type: ["Computers & Software (Librarian A & Mac)"],
+    value: ["$30,000.00"],
+  },
+  {
+    organization: "University of Alexandria - Faculty of Arts - Department of Library and Information Science",
+    subject: "Hardware & Software",
+    type: ["Computers & Software (Librarian A & Mac)"],
+    value: ["$30,000.00"],
+  },
+  {
+    organization: "University of Menoufia - Faculty of Arts - Department of Library and Information Science",
+    subject: "Hardware & Software",
+    type: ["Computers & Software (Librarian A & Mac)"],
+    value: ["$30,000.00"],
+  },
 ];
 
-import { Link } from "react-router-dom";
+
 import { useEffect } from "react";
 
 export default function Donations() {

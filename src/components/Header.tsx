@@ -68,12 +68,6 @@ export default function Header() {
               description: "Learn about our core purpose and future goals.",
             },
             {
-              label: "Board of Advisors",
-              path: "/about/team",
-              description: "Meet the experts guiding our strategic direction.",
-            },
-
-            {
               label: "Employees",
               path: "/about/team/employees",
               description: "Our dedicated team driving success every day.",
@@ -103,11 +97,7 @@ export default function Header() {
               path: "/about/chairman/accomplishments",
               description: "Milestones and successes of our leadership.",
             },
-            {
-              label: "Client References",
-              path: "/about/chairman/clients",
-              description: "Our valued clients across various sectors.",
-            },
+           
           ],
         },
         {
@@ -132,6 +122,11 @@ export default function Header() {
               label: "ACML Awards",
               path: "/about/awards",
               description: "Celebrating excellence in our field.",
+            },
+             {
+              label: "Client References",
+              path: "/about/chairman/clients",
+              description: "Our valued clients across various sectors.",
             },
           ],
         },
