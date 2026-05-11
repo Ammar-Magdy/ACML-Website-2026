@@ -14,7 +14,7 @@ import asmeLogo from "../assets/Photos/Publishers/ASME/logo.svg";
 import awardProof from "../assets/Photos/Partners/award_proof.webp";
 import awardPdf from "../assets/PDF/Partners/ACML-2I2S BEST-PERFORMANCE-ACCURIS-CHANNEL PARTNER 2025.pdf";
 
-
+import partnersvideo from "../../src/assets/Videos/Partners/Partners.mp4";
 interface Partner {
   name: string;
   logo: string;
@@ -91,21 +91,26 @@ export default function Partners() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-20 transition-colors duration-300">
       {/* ── Hero Section ─────────────────────────────────────────── */}
       <div className="relative w-full h-[90vh] min-h-[600px] mb-12 overflow-hidden shadow-2xl bg-[#0F172A]">
-        {/* Gradient background — no video needed for a partners page */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#064e3b] via-[#065f46] to-[#0F172A]" />
+       
+        <div className="absolute inset-0 w-full h-full">
+          <video preload="metadata" autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover">
+            <source src={partnersvideo} type="video/mp4" />
+          </video>
+          {/* Brand-Aligned Video Overlay (Janes Orange) */}
+          <div className="absolute inset-0 bg-[#EF6C00]/85 mix-blend-multiply"></div>
 
-        {/* Subtle corporate grid overlay — matches UIC / IEC */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_20%,transparent_100%)] pointer-events-none" />
+          {/* Subtle Corporate Grid Overlay */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_20%,transparent_100%)] pointer-events-none"></div>
+        </div>
 
         {/* Content */}
         <div className="relative z-10 w-full h-full flex items-center justify-start">
           <div className="container mx-auto px-4 text-left">
-            {/* Icon badge */}
-            <div className="flex justify-start mb-8">
-              <div className="w-20 h-20 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center shadow-xl">
-                <Globe size={40} className="text-emerald-300" />
-              </div>
-            </div>
+
 
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Our Strategic Partners

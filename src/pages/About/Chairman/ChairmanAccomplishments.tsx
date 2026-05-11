@@ -118,63 +118,61 @@ export default function ChairmanAccomplishments() {
               </h3>
               <ul className="space-y-4">
                 <li>
-                  <a
-                    href="http://mail.asis.org/pipermail/sigiii-l/2002-September/000042.html"
-                    target="_blank"
+                  <h5
                     rel="noopener noreferrer"
                     className="font-semibold text-gray-900 dark:text-white hover:text-emerald-600 transition-colors"
                   >
                     [Sigiii-l] FW: Dr. Shawky Salem Conference Grant
-                  </a>
+                  </h5>
                 </li>
                 <li>
-                  <a
-                    href="http://mail.asis.org/pipermail/sigiii-l/2002-September/000043.html"
-                    target="_blank"
+                  <h5
                     rel="noopener noreferrer"
                     className="font-semibold text-gray-900 dark:text-white hover:text-emerald-600 transition-colors"
                   >
                     [Sigiii-l] FW: Guust van Wesemael Literacy Prize
-                  </a>
+                  </h5>
                 </li>
                 <li>
-                  <a
-                    href="http://www.hwwilson.com/foreigndists/foreign_alpha.htm"
-                    target="_blank"
+                  <h5
                     rel="noopener noreferrer"
                     className="font-semibold text-gray-900 dark:text-white hover:text-emerald-600 transition-colors"
                   >
                     International Distributors by Alphabetical Order
-                  </a>
+                  </h5>
+                </li>
+                <li>  
+                  <h5
+                    rel="noopener noreferrer"
+                    className="font-semibold text-gray-900 dark:text-white hover:text-emerald-600 transition-colors"
+                  >
+                    International Distributors by Alphabetical Order
+                  </h5>
                   <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                     EGYPT ACML Integrated Information Solutions & Systems Dr.
                     Shawky Salem
                   </p>
                 </li>
                 <li>
-                  <a
-                    href="http://www.hwwilson.com/foreigndists/m_east_dists.htm"
-                    target="_blank"
+                  <h5
                     rel="noopener noreferrer"
                     className="font-semibold text-gray-900 dark:text-white hover:text-emerald-600 transition-colors"
                   >
                     Middle Eastern, European, African Distributors
-                  </a>
+                  </h5>
                   <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                     aip.cz ... Dr. Shawky Salem - (Contact)
                     chairman@ACML-egypt.com...
                   </p>
                 </li>
                 <li>
-                  <a
-                    href="http://www.un.org/Depts/dhl/sflib/libmgnt/grants.htm"
-                    target="_blank"
+                  <h5
                     rel="noopener noreferrer"
                     className="font-semibold text-gray-900 dark:text-white hover:text-emerald-600 transition-colors"
                   >
                     Grants for libraries and librarians of the developing
                     countries
-                  </a>
+                  </h5>
                   <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                     Dr. Shawky Salem Training Grant for Arab Specialists in
                     Library and Information Sciences: the aim of this permanent,
@@ -182,15 +180,13 @@ export default function ChairmanAccomplishments() {
                   </p>
                 </li>
                 <li>
-                  <a
-                    href="http://www.ala.org/ala/irrt/irrtcommittees/irrtintlexc/internationalopportunities.htm"
-                    target="_blank"
+                  <h5
                     rel="noopener noreferrer"
                     className="font-semibold text-gray-900 dark:text-white hover:text-emerald-600 transition-colors"
                   >
                     ALA | International Opportunities and Funding Sources for
                     ...
-                  </a>
+                  </h5>
                   <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                     IFLA - Dr. Shawky Salem Training Grant for Arab Specialists
                     in Library and Information Sciences The aim of this grant is
@@ -198,14 +194,12 @@ export default function ChairmanAccomplishments() {
                   </p>
                 </li>
                 <li>
-                  <a
-                    href="http://www.ieee.org/products/onlinepubs/info/contactus_outside.html"
-                    target="_blank"
+                  <h5
                     rel="noopener noreferrer"
                     className="font-semibold text-gray-900 dark:text-white hover:text-emerald-600 transition-colors"
                   >
                     IEEE Publications Online - Contact Us
-                  </a>
+                  </h5>
                   <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                     35, Rue de Neuilly 92110 Clichy France... Egypt Acml
                     Integrated Information Solution & Systems (ACML) Attn: Dr.
@@ -213,15 +207,13 @@ export default function ChairmanAccomplishments() {
                   </p>
                 </li>
                 <li>
-                  <a
-                    href="http://www.sla.org/caucus/kiie/kiie-funding.htm"
-                    target="_blank"
+                  <h5
                     rel="noopener noreferrer"
                     className="font-semibold text-gray-900 dark:text-white hover:text-emerald-600 transition-colors"
                   >
                     Special Libraries Association: International Information
                     Exchange ...
-                  </a>
+                  </h5>
                   <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                     Dr. Shawky Salem Training Grant for Arab Specialists in
                     Library and Information Sciences, Annual grant for a
@@ -229,25 +221,21 @@ export default function ChairmanAccomplishments() {
                   </p>
                 </li>
                 <li>
-                  <a
-                    href="http://www.lis.uiuc.edu/~b-sloan/job.htm"
-                    target="_blank"
+                  <h5
                     rel="noopener noreferrer"
                     className="font-semibold text-gray-900 dark:text-white hover:text-emerald-600 transition-colors"
                   >
                     Beyond the Job
-                  </a>
+                  </h5>
                   {/* Text implied but not explicitly in list item in HTML beyond title context */}
                 </li>
                 <li>
-                  <a
-                    href="http://ifla.queenslibrary.org/III/grants/salemgrant.htm"
-                    target="_blank"
+                  <h5
                     rel="noopener noreferrer"
                     className="font-semibold text-gray-900 dark:text-white hover:text-emerald-600 transition-colors"
                   >
                     Dr. Shawky Salem Conference Grant - Call for Applications
-                  </a>
+                  </h5>
                   <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                     Dr. Shawky Salem Conference Grant Call for Applications,
                     2003. The Dr. Shawky Salem Conference Grant is an annual
@@ -255,14 +243,12 @@ export default function ChairmanAccomplishments() {
                   </p>
                 </li>
                 <li>
-                  <a
-                    href="http://www.ifla.org/VII/s26/annual/sp26-00.htm"
-                    target="_blank"
+                  <h5
                     rel="noopener noreferrer"
                     className="font-semibold text-gray-900 dark:text-white hover:text-emerald-600 transition-colors"
                   >
                     Section on Regional Activities: Asia and Oceania
-                  </a>
+                  </h5>
                   <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                     Members: Toru Koizumi (Japan) Mandana Sadigh-Behzadi (Iran)
                     Special Advisors: Dr Maria LaoSunthara (Thailand) Dr Shawky
@@ -286,14 +272,12 @@ export default function ChairmanAccomplishments() {
                   <p className="text-sm text-gray-600 dark:text-gray-400">
                     Shawky Salem. Pages: 57 - 58
                   </p>
-                  <a
-                    href="http://portal.acm.org/toc.cfm?id=47040&type=issue&coll=portal&dl=ACM&CFID=11111111&CFTOKEN=2222222"
-                    target="_blank"
+                  <h5
                     rel="noopener noreferrer"
                     className="text-emerald-600 hover:underline text-sm"
                   >
                     View ACM Portal
-                  </a>
+                  </h5>
                 </li>
                 <li>
                   <p className="font-semibold text-gray-900 dark:text-white">
@@ -303,14 +287,12 @@ export default function ChairmanAccomplishments() {
                   <p className="text-sm text-gray-600 dark:text-gray-400">
                     Shawky Salem. Pages: 425 - 440
                   </p>
-                  <a
-                    href="http://portal.acm.org/toc.cfm?id=159204&dl=portal&dl=ACM&type=issue&vol=J445&voltype=periodical&CFID=11111111&CFTOKEN=2222222"
-                    target="_blank"
+                  <h5
                     rel="noopener noreferrer"
                     className="text-emerald-600 hover:underline text-sm"
                   >
                     View ACM Portal
-                  </a>
+                  </h5>
                 </li>
                 <li>
                   <p className="font-semibold text-gray-900 dark:text-white">
@@ -321,12 +303,12 @@ export default function ChairmanAccomplishments() {
                     Rosemarie Bittner, US Embassy Berlin. Die Alexandria
                     Bibliothek. Prof. Dr. Shawky Salem, Alexandria.
                   </p>
-                  <a
-                    href="http://ebib.oss.wroc.pl/konferencje/spannungsfeld.rtf"
+                  <h5
+                    rel="noopener noreferrer"
                     className="text-emerald-600 hover:underline text-sm"
                   >
                     [RTF] Download
-                  </a>
+                  </h5>
                 </li>
                 <li>
                   <p className="font-semibold text-gray-900 dark:text-white">
@@ -337,15 +319,12 @@ export default function ChairmanAccomplishments() {
                     Wormell und Shawky Salem vonüber waren offensichtlich eher
                     aus persönlichem Interesse gekom- men und ...
                   </p>
-                  <a
-                    href="http://www.ifla-deutschland.de/de/downloads/hobohm_boston_2001.pdf#view=FitH"
-                    target="_blank"
+                  <h5
                     rel="noopener noreferrer"
-                    type="application/pdf"
                     className="text-emerald-600 hover:underline text-sm"
                   >
                     [PDF] Download
-                  </a>
+                  </h5>
                 </li>
                 <li>
                   <p className="font-semibold text-gray-900 dark:text-white">
@@ -357,14 +336,12 @@ export default function ChairmanAccomplishments() {
                     tools for development/Shawky Salem. 11. Multimedia
                     information and systems ...
                   </p>
-                  <a
-                    href="https://www.vedamsbooks.com/no12227.htm"
-                    target="_blank"
+                  <h5
                     rel="noopener noreferrer"
                     className="text-emerald-600 hover:underline text-sm"
                   >
                     View Book
-                  </a>
+                  </h5>
                 </li>
                 <li>
                   <p className="font-semibold text-gray-900 dark:text-white">
@@ -375,14 +352,12 @@ export default function ChairmanAccomplishments() {
                     - 708 S.; (engl.) ; ISBN 0-444-41475-4: Standort im
                     Historischen Lesesaal: bibl A 110 / 14 A 5972 a; ...
                   </p>
-                  <a
-                    href="http://opac.ub.uni-tuebingen.de/hls/bibl/biblA.html"
-                    target="_blank"
+                  <h5
                     rel="noopener noreferrer"
                     className="text-emerald-600 hover:underline text-sm"
                   >
                     Uni-Tuebingen
-                  </a>
+                  </h5>
                 </li>
                 <li>
                   <p className="font-semibold text-gray-900 dark:text-white">
@@ -393,14 +368,12 @@ export default function ChairmanAccomplishments() {
                     Salem. Amsterdan [etc.] : Elsevier, 1976. - 708 str. ISBN
                     0-444-41475-4. ...
                   </p>
-                  <a
-                    href="http://www2.arnes.si/%7Eljnuk4/btk-slo.html"
-                    target="_blank"
+                  <h5
                     rel="noopener noreferrer"
                     className="text-emerald-600 hover:underline text-sm"
                   >
                     View Dictionary
-                  </a>
+                  </h5>
                 </li>
                 <li>
                   <p className="font-semibold text-gray-900 dark:text-white">
@@ -411,14 +384,12 @@ export default function ChairmanAccomplishments() {
                     compiled by LY Chaballe,L. Masuy, and JP Vandenberghe ; with
                     an Arabic supplement by Shawky Salem. ...
                   </p>
-                  <a
-                    href="http://www.waikato.ac.nz/library/resources/lang/lang_mul.html"
-                    target="_blank"
+                  <h5
                     rel="noopener noreferrer"
                     className="text-emerald-600 hover:underline text-sm"
                   >
                     View Collection
-                  </a>
+                  </h5>
                 </li>
                 <li>
                   <p className="font-semibold text-gray-900 dark:text-white">
@@ -429,14 +400,12 @@ export default function ChairmanAccomplishments() {
                     International Seminar at Bibliotheca Alexandrina (BA), and I
                     discussed the status of the seminar and the ...
                   </p>
-                  <a
-                    href="http://www.asis.org/Bulletin/Jan-02/inside.html"
-                    target="_blank"
+                  <h5
                     rel="noopener noreferrer"
                     className="text-emerald-600 hover:underline text-sm"
                   >
                     Inside ASIST
-                  </a>
+                  </h5>
                 </li>
                 <li>
                   <p className="font-semibold text-gray-900 dark:text-white">
@@ -447,14 +416,12 @@ export default function ChairmanAccomplishments() {
                     Alexandrina. in: David I. Raitt. Online Information 91.
                     Proceedings ... Salem, Shawky. The ...
                   </p>
-                  <a
-                    href="http://www.beic.it/associazione/progettomassima50.html"
-                    target="_blank"
+                  <h5
                     rel="noopener noreferrer"
                     className="text-emerald-600 hover:underline text-sm"
                   >
                     View Project
-                  </a>
+                  </h5>
                 </li>
                 <li>
                   <p className="font-semibold text-gray-900 dark:text-white">
@@ -465,14 +432,12 @@ export default function ChairmanAccomplishments() {
                     arranged on an English alphabetical basis by WE Clason ;
                     with Arabic supplement by Shawky Salem. ...
                   </p>
-                  <a
-                    href="http://www.amicus.nlc-bnc.ca/wbin/resanet/resultsm/l=0/d=1/r=1/e=0/s=s/n=SK/h=10/t=3499639/u=Subject=Dictionaries,+Polyglot"
-                    target="_blank"
+                  <h5
                     rel="noopener noreferrer"
                     className="text-emerald-600 hover:underline text-sm"
                   >
                     View Result
-                  </a>
+                  </h5>
                 </li>
               </ul>
             </div>
