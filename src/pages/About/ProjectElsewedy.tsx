@@ -55,7 +55,7 @@ export default function ProjectElsewedy() {
             </h1>
             <div className="mt-8 flex flex-wrap justify-start gap-4">
               <a
-                href="https://elsewedyelectric.com/en/default.aspx"
+                href="https://elsewedyelectric.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-3 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg flex items-center"

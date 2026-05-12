@@ -3,7 +3,7 @@ import { useEffect } from "react";
 // Store the default favicon/title once when the app loads or the first time the hook runs if not correctly captured globally.
 // However, since this is a hook, it might be safer to rely on the fact that the default state is known.
 // Default favicon from index.html
-const DEFAULT_FAVICON = "/src/assets/image2vector.svg";
+const DEFAULT_FAVICON = "/src/assets/icon.svg";
 const DEFAULT_TITLE =
   "ACML - ACML Integrated Information Solutions & Systems | Your Gateway to the Information Age";
 
@@ -19,14 +19,13 @@ export const usePageMetadata = (title: string, faviconUrl: string) => {
 
     // 2. Set the NEW metadata
     document.title = title;
+    link.href = faviconUrl;
+
     // 3. Cleanup function:
-    // Since there is no default favicon in the project (no /vite.svg or favicon.ico found),
-    // we remove the link element to force the browser to revert to the default (blank) icon.
+    // Restore default title and favicon when component unmounts
     return () => {
       document.title = DEFAULT_TITLE;
-      if (link && link.parentNode) {
-        link.parentNode.removeChild(link);
-      }
+      link.href = DEFAULT_FAVICON;
     };
   }, [title, faviconUrl]);
 };
