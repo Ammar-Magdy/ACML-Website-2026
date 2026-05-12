@@ -2,17 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/icon.svg" />
     <link rel="icon" type="image/x-icon" href="/ACML-Website-2026/favicon.ico" />
-    <link rel="apple-touch-icon" href="/ACML-Website-2026/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="/ACML-Website-2026/apple-touch-icon.png" sizes="180x180" />
+    <link rel="icon" type="image/svg+xml" href="/ACML-Website-2026/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      ACML Integrated Information Solutions & Systems | Your Gateway to
-      the Information Age
-    </title>
+    <title>ACML - Library Solutions & Digital Databases | Egypt's Leading Provider</title>
     <meta
       name="description"
-      content="ACML is Egypt's leading provider of library media, technology solutions, and digital content management. Exclusive agent for international publishers, databases, electronic journals, library automation, and industry standards."
+      content="Egypt's leading library solutions provider. ACML offers digital databases, electronic journals, library automation, and international publisher partnerships for institutions and organizations."
     />
     <meta
       name="keywords"
@@ -29,6 +26,11 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://ammar-magdy.github.io/ACML-Website-2026/" />
     
+    <!-- Language Variants (Hreflang) -->
+    <link rel="alternate" hreflang="en" href="https://ammar-magdy.github.io/ACML-Website-2026/" />
+    <link rel="alternate" hreflang="ar" href="https://ammar-magdy.github.io/ACML-Website-2026/ar/" />
+    <link rel="alternate" hreflang="x-default" href="https://ammar-magdy.github.io/ACML-Website-2026/" />
+    
     <!-- Open Graph Tags -->
     <meta property="og:title" content="ACML - Egypt's Leading Library & Information Solutions" />
     <meta
@@ -40,6 +42,7 @@
     <meta property="og:image" content="https://ammar-magdy.github.io/ACML-Website-2026/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:site_name" content="ACML" />
     
     <!-- Twitter Card -->
@@ -63,6 +66,7 @@
       "logo": "https://ammar-magdy.github.io/ACML-Website-2026/logo.png",
       "description": "Egypt's leading provider of library media, technology solutions, and digital content management",
       "foundingDate": "1995",
+      "areaServed": "EG",
       "sameAs": [
         "https://www.facebook.com/ACML",
         "https://www.linkedin.com/company/acml"
@@ -78,13 +82,61 @@
         "@type": "ContactPoint",
         "contactType": "Customer Service",
         "areaServed": "EG"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Alexandria",
+        "addressRegion": "Alexandria Governorate",
+        "addressCountry": "EG"
       }
     }
     </script>
     
-    <!-- Preconnect to Improve Performance -->
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ammar-magdy.github.io/ACML-Website-2026/"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- LocalBusiness Schema for Egypt -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "ACML",
+      "image": "https://ammar-magdy.github.io/ACML-Website-2026/logo.png",
+      "description": "Leading provider of library solutions, databases, and information technology in Egypt",
+      "areaServed": "EG",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Alexandria",
+        "addressRegion": "Alexandria Governorate",
+        "addressCountry": "EG"
+      },
+      "url": "https://ammar-magdy.github.io/ACML-Website-2026/",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "availableLanguage": ["ar", "en"]
+      }
+    }
+    </script>
+    
+    <!-- Performance Optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://api.supabase.co" />
+    <link rel="prefetch" href="/ACML-Website-2026/logo.png" />
   </head>
   <body>
     <div id="root"></div>
