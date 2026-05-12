@@ -10,7 +10,7 @@ export default defineConfig({
     exclude: ["lucide-react"],
   },
   build: {
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 2000,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -18,7 +18,6 @@ export default defineConfig({
           'ui-vendor': ['lucide-react'],
           'i18n-vendor': ['i18next', 'react-i18next'],
           'animation-vendor': ['framer-motion'],
-          'supabase-vendor': ['@supabase/supabase-js'],
         },
       },
     },
