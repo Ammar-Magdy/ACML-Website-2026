@@ -14,7 +14,7 @@ import asmeLogo from "../assets/Photos/Publishers/ASME/logo.svg";
 import awardProof from "../assets/Photos/Partners/award_proof.webp";
 import awardPdf from "../assets/PDF/Partners/ACML-2I2S BEST-PERFORMANCE-ACCURIS-CHANNEL PARTNER 2025.pdf";
 
-import partnersvideo from "../../src/assets/Videos/Partners/Partners.mp4";
+import partnersvideo from "../assets/Videos/Partners/Partners.mp4";
 interface Partner {
   name: string;
   logo: string;

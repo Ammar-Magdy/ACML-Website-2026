@@ -9,6 +9,11 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import homeVideo from "../assets/Videos/Home/Background.mp4";
+import photo002 from "../assets/Photos/Home/002.webp";
+import photo003 from "../assets/Photos/Home/003.webp";
+import photo004 from "../assets/Photos/Home/004.webp";
+import photo005 from "../assets/Photos/Home/005.webp";
 
 export default function Home() {
   useEffect(() => {
@@ -79,7 +84,7 @@ export default function Home() {
             className="w-full h-full object-cover "
           >
             <source
-              src={`${import.meta.env.BASE_URL}videos/Background.mp4`}
+              src={homeVideo}
               type="video/mp4"
             />
           </video>
@@ -207,28 +212,28 @@ export default function Home() {
               <img
                 loading="lazy"
                 decoding="async"
-                src={`${import.meta.env.BASE_URL}002.webp`}
+                src={photo002}
                 alt="ACML E-Books and Journals"
                 className="rounded-lg shadow-lg w-full h-48 object-fill dark:opacity-90"
               />
               <img
                 loading="lazy"
                 decoding="async"
-                src={`${import.meta.env.BASE_URL}003.webp`}
+                src={photo003}
                 alt="Library Collection"
                 className="rounded-lg shadow-lg w-full h-48 object-cover mt-8 dark:opacity-90"
               />
               <img
                 loading="lazy"
                 decoding="async"
-                src={`${import.meta.env.BASE_URL}004.webp`}
+                src={photo004}
                 alt="Digital Solutions"
                 className="rounded-lg shadow-lg w-full h-48 object-cover dark:opacity-90"
               />
               <img
                 loading="lazy"
                 decoding="async"
-                src={`${import.meta.env.BASE_URL}005.webp`}
+                src={photo005}
                 alt="ACML Mission"
                 className="rounded-lg shadow-lg w-full h-48 object-cover mt-8 dark:opacity-90"
               />

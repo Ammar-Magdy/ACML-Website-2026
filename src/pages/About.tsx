@@ -11,6 +11,8 @@ import {
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import aboutPhoto001 from "../assets/Photos/About/001.webp";
+import aboutPhoto006 from "../assets/Photos/About/006.webp";
 
 export default function About() {
   const location = useLocation();
@@ -129,7 +131,7 @@ export default function About() {
               <img
                 loading="lazy"
                 decoding="async"
-                src={`${import.meta.env.BASE_URL}001.webp`}
+                src={aboutPhoto001}
                 alt="ACML Store Front"
                 className="rounded-xl shadow-2xl w-full dark:opacity-90"
               />
@@ -392,7 +394,7 @@ export default function About() {
               <img
                 loading="lazy"
                 decoding="async"
-                src={`${import.meta.env.BASE_URL}006.webp`}
+                src={aboutPhoto006}
                 alt="ACML Mission"
                 className="rounded-xl shadow-2xl w-full dark:opacity-90"
               />
