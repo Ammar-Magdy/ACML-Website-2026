@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { useEffect } from "react";
+import contactPhoto from "../assets/Photos/About/001.webp";
 
 export default function Contact() {
   useEffect(() => {
@@ -449,7 +450,7 @@ export default function Contact() {
                 <img
                   loading="lazy"
                   decoding="async"
-                  src={`${import.meta.env.BASE_URL}001.webp`}
+                  src={contactPhoto}
                   alt="ACML Store Location"
                   className="w-full h-64 object-cover"
                 />
