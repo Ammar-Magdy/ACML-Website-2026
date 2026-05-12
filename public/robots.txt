@@ -1,0 +1,44 @@
+# ACML Website - robots.txt
+# Allow all search engines to crawl public content
+
+User-agent: *
+Allow: /ACML-Website-2026/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /*?sort=
+Disallow: /*?filter=
+
+# Block AI training bots (optional - remove if you want AI indexing)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+# Allow Google, Bing, Yandex, Baidu, DuckDuckGo
+User-agent: Googlebot
+Allow: /ACML-Website-2026/
+
+User-agent: Bingbot
+Allow: /ACML-Website-2026/
+
+User-agent: Yandexbot
+Allow: /ACML-Website-2026/
+
+User-agent: Baiduspider
+Allow: /ACML-Website-2026/
+
+User-agent: DuckDuckBot
+Allow: /ACML-Website-2026/
+
+# Crawl-delay for respectful crawling (optional)
+# Crawl-delay: 1
+
+# Sitemap location - UPDATE THIS with your actual domain
+Sitemap: https://ammar-magdy.github.io/ACML-Website-2026/sitemap.xml

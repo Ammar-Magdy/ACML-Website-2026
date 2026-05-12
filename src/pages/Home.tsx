@@ -17,7 +17,8 @@ import photo005 from "../assets/Photos/Home/005.webp";
 
 export default function Home() {
   useEffect(() => {
-    document.title = "ACML";
+    // Use the optimized title from index.html instead of overwriting it
+    document.title = "ACML Integrated Information Solutions & Systems | Your Gateway to the Information Age";
   }, []);
 
   const features = [
