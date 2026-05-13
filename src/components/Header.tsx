@@ -252,25 +252,25 @@ export default function Header() {
       }`}
       onMouseLeave={() => setActiveDropdown(null)}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-24 w-full">
-          {/* Logo */}
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24 w-full gap-2 sm:gap-4">
+          {/* Logo & Title */}
           <Link
             to="/"
-            className="flex items-center cursor-pointer group"
+            className="flex items-center cursor-pointer group flex-shrink-0"
             onClick={onLinkClick}
           >
-            <AnimatedLogo className="h-20 w-36" />
-            <div className="ms-3 text-sm font-bold hidden md:block border-l border-gray-300 dark:border-gray-700 pl-3">
-              <span className="text-[#CB1F38]">ACML</span>{" "}
-              <span className="text-[#317088]">
+            <AnimatedLogo className="h-14 w-24 sm:h-16 sm:w-28 lg:h-20 lg:w-36" />
+            <div className="ms-2 sm:ms-3 text-xs sm:text-sm font-bold hidden sm:flex flex-col border-l border-gray-300 dark:border-gray-700 pl-2 sm:pl-3 whitespace-nowrap sm:whitespace-normal">
+              <span className="text-[#CB1F38] leading-tight">ACML</span>
+              <span className="text-[#317088] text-[10px] sm:text-xs lg:text-sm leading-tight">
                 INTEGRATED INFORMATION SOLUTIONS & SYSTEMS
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-3 lg:gap-6 flex-1 justify-center">
             {navItems.map((item) => (
               <div
                 key={item.id}
@@ -280,7 +280,7 @@ export default function Header() {
                 <Link
                   to={item.path}
                   onClick={onLinkClick}
-                  className={`flex items-center gap-1 text-sm font-bold transition-colors duration-200 ${
+                  className={`flex items-center gap-1 text-sm font-bold whitespace-nowrap transition-colors duration-200 ${
                     (
                       activeDropdown
                         ? activeDropdown === item.id
@@ -368,20 +368,18 @@ export default function Header() {
               </div>
             ))}
 
-            <div className="flex items-center gap-3 border-l border-gray-200 dark:border-gray-700 pl-4">
-              <SearchBar onNavigate={(page) => handleNavClick(page)} />
+            <div className="flex items-center gap-2 sm:gap-3 border-l border-gray-200 dark:border-gray-700 pl-2 sm:pl-4 flex-shrink-0">
               <ThemeToggle />
             </div>
           </nav>
 
-          {/* Mobile Menu Toggle */}
-          <div className="lg:hidden flex items-center space-x-4 rtl:space-x-reverse">
-            <SearchBar onNavigate={(page) => handleNavClick(page)} />
+          {/* Tablet & Mobile Menu Toggle */}
+          <div className="lg:hidden flex items-center gap-2 sm:gap-3 flex-shrink-0">
             <button
               className="p-2 text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={20} className="sm:w-6 sm:h-6" /> : <Menu size={20} className="sm:w-6 sm:h-6" />}
             </button>
           </div>
         </div>
@@ -389,8 +387,8 @@ export default function Header() {
 
       {/* Mobile Menu Drawer */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-white dark:bg-gray-900 absolute top-full left-0 w-full h-[calc(100vh-80px)] border-t border-gray-200 dark:border-gray-800 overflow-y-auto pb-32">
-          <nav className="container mx-auto px-4 py-4 flex flex-col space-y-2">
+        <div className="lg:hidden bg-white dark:bg-gray-900 absolute top-full left-0 w-full max-h-[calc(100vh-64px)] sm:max-h-[calc(100vh-80px)] lg:max-h-[calc(100vh-96px)] border-t border-gray-200 dark:border-gray-800 overflow-y-auto pb-32">
+          <nav className="container mx-auto px-3 sm:px-4 py-3 sm:py-4 flex flex-col gap-1 sm:gap-2">
             {navItems.map((item) => (
               <div
                 key={item.id}
@@ -400,7 +398,7 @@ export default function Header() {
                   <Link
                     to={item.path}
                     onClick={onLinkClick}
-                    className={`flex-grow text-left py-3 px-2 text-base font-bold ${
+                    className={`flex-grow text-left py-3 px-2 text-sm sm:text-base font-bold ${
                       (isActive(item.path) && !mobileExpanded) ||
                       mobileExpanded === item.id
                         ? "text-emerald-600 dark:text-emerald-500"
@@ -412,7 +410,7 @@ export default function Header() {
                   {item.hasDropdown && (
                     <button
                       onClick={() => toggleMobileSubmenu(item.id)}
-                      className={`p-3 transition-colors ${
+                      className={`p-2 sm:p-3 transition-colors flex-shrink-0 ${
                         mobileExpanded === item.id
                           ? "text-emerald-600 dark:text-emerald-500"
                           : "text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400"
@@ -427,19 +425,19 @@ export default function Header() {
                 </div>
 
                 {item.hasDropdown && mobileExpanded === item.id && (
-                  <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg mb-2 px-4 py-2 space-y-4 animate-in fade-in slide-in-from-top-1 duration-200">
+                  <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg mb-2 px-3 sm:px-4 py-2 sm:py-3 gap-3 sm:gap-4 flex flex-col animate-in fade-in slide-in-from-top-1 duration-200">
                     {item.megaMenu?.map((section, idx) => (
                       <div key={idx}>
-                        <h5 className="text-xs font-bold text-emerald-600 dark:text-emerald-500 uppercase tracking-widest mb-2 mt-2">
+                        <h5 className="text-xs font-bold text-emerald-600 dark:text-emerald-500 uppercase tracking-widest mb-2 mt-1 sm:mt-2">
                           {section.title}
                         </h5>
-                        <div className="grid grid-cols-1 gap-1 pl-2 border-l-2 border-emerald-100 dark:border-emerald-900/30">
+                        <div className="grid grid-cols-1 gap-1 pl-2 sm:pl-3 border-l-2 border-emerald-100 dark:border-emerald-900/30">
                           {section.links.map((link, linkIdx) => (
                             <Link
                               key={linkIdx}
                               to={link.path}
                               onClick={onLinkClick}
-                              className="text-left py-2 text-sm font-bold text-gray-600 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 block"
+                              className="text-left py-2 text-xs sm:text-sm font-bold text-gray-600 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 block transition-colors"
                             >
                               {link.label}
                             </Link>
@@ -452,7 +450,7 @@ export default function Header() {
               </div>
             ))}
 
-            <div className="mt-6 flex justify-end items-center px-2 pt-4 border-t border-gray-100 dark:border-gray-800">
+            <div className="mt-4 sm:mt-6 flex justify-end items-center px-2 pt-3 sm:pt-4 border-t border-gray-100 dark:border-gray-800">
               <ThemeToggle />
             </div>
           </nav>
