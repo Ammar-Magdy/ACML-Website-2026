@@ -6,6 +6,7 @@ import {
   HardDrive,
   FileText,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -17,7 +18,7 @@ import imgSoftware from "../assets/Photos/Services/Our-Software-Products.webp";
 import pressreaderLogo from "../assets/Photos/Publishers/PressReader/Background.webp";
 
 interface Service {
-  icon: any;
+  icon: LucideIcon;
   title: string;
   description: string;
   features: (string | { label: string; path: string })[];

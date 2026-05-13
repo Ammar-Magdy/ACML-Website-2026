@@ -27,9 +27,7 @@ export default function PublisherACM() {
       const el = document.getElementById(location.hash.slice(1));
       if (el) {
         setTimeout(() => el.scrollIntoView({ behavior: "smooth" }), 100);
-      } else {
       }
-    } else {
     }
   }, [location]);
 

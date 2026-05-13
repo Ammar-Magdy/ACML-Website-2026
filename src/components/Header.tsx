@@ -253,15 +253,15 @@ export default function Header() {
       onMouseLeave={() => setActiveDropdown(null)}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-24 w-full">
+        <div className="flex items-center justify-between h-20 md:h-24 w-full gap-4 lg:gap-6">
           {/* Logo */}
           <Link
             to="/"
-            className="flex items-center cursor-pointer group"
+            className="flex items-center gap-3 min-w-0 cursor-pointer group"
             onClick={onLinkClick}
           >
-            <AnimatedLogo className="h-20 w-36" />
-            <div className="ms-3 text-sm font-bold hidden md:block border-l border-gray-300 dark:border-gray-700 pl-3">
+            <AnimatedLogo className="h-14 w-24 sm:h-16 sm:w-28 md:h-20 md:w-36 flex-shrink-0" />
+            <div className="min-w-0 text-xs md:text-sm font-bold hidden md:block border-l border-gray-300 dark:border-gray-700 pl-3 leading-tight truncate">
               <span className="text-[#CB1F38]">ACML</span>{" "}
               <span className="text-[#317088]">
                 INTEGRATED INFORMATION SOLUTIONS & SYSTEMS
@@ -270,7 +270,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-6">
+          <nav className="hidden xl:flex items-center gap-5 xl:gap-7 flex-nowrap">
             {navItems.map((item) => (
               <div
                 key={item.id}
@@ -280,7 +280,7 @@ export default function Header() {
                 <Link
                   to={item.path}
                   onClick={onLinkClick}
-                  className={`flex items-center gap-1 text-sm font-bold transition-colors duration-200 ${
+                  className={`flex items-center gap-1 text-sm font-bold whitespace-nowrap transition-colors duration-200 ${
                     (
                       activeDropdown
                         ? activeDropdown === item.id
@@ -368,14 +368,14 @@ export default function Header() {
               </div>
             ))}
 
-            <div className="flex items-center gap-3 border-l border-gray-200 dark:border-gray-700 pl-4">
+            <div className="flex items-center gap-3 border-l border-gray-200 dark:border-gray-700 pl-4 flex-shrink-0">
               <SearchBar onNavigate={(page) => handleNavClick(page)} />
               <ThemeToggle />
             </div>
           </nav>
 
           {/* Mobile Menu Toggle */}
-          <div className="lg:hidden flex items-center space-x-4 rtl:space-x-reverse">
+          <div className="xl:hidden flex items-center gap-3 sm:gap-4">
             <SearchBar onNavigate={(page) => handleNavClick(page)} />
             <button
               className="p-2 text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
@@ -389,8 +389,8 @@ export default function Header() {
 
       {/* Mobile Menu Drawer */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-white dark:bg-gray-900 absolute top-full left-0 w-full h-[calc(100vh-80px)] border-t border-gray-200 dark:border-gray-800 overflow-y-auto pb-32">
-          <nav className="container mx-auto px-4 py-4 flex flex-col space-y-2">
+        <div className="xl:hidden bg-white dark:bg-gray-900 absolute top-full left-0 w-full h-[calc(100vh-80px)] md:h-[calc(100vh-96px)] border-t border-gray-200 dark:border-gray-800 overflow-y-auto pb-32">
+          <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
             {navItems.map((item) => (
               <div
                 key={item.id}

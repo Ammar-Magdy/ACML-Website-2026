@@ -3,8 +3,6 @@ import { Zap } from "lucide-react";
 
 import chemLogo from "../../../assets/Photos/Publishers/ChemWatch/logo.webp";
 import chemBg from "../../../assets/Photos/Publishers/ChemWatch/Background.webp";
-import img1 from "../../../assets/Photos/Publishers/ChemWatch/GoldFFX.webp";
-import img2 from "../../../assets/Photos/Publishers/ChemWatch/Backpack.webp";
 import img3 from "../../../assets/Photos/Publishers/ChemWatch/GoldFFX.webp";
 import img4 from "../../../assets/Photos/Publishers/ChemWatch/Backpack.webp";
 import img5 from "../../../assets/Photos/Publishers/ChemWatch/Backpack-Limited.webp";

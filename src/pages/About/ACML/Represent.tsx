@@ -28,6 +28,16 @@ import logoPressReader from "../../../assets/Photos/About/ACML-Represents/pressr
 import logoSAE from "../../../assets/Photos/About/ACML-Represents/sae.svg";
 import { useEffect } from "react";
 
+interface Publisher {
+  name: string;
+  description: string;
+  territory: string;
+  url: string;
+  logo: string;
+  bgClass?: string;
+  imgClass?: string;
+}
+
 export default function Represent() {
   useEffect(() => {
     document.title = "Represent";
@@ -35,7 +45,7 @@ export default function Represent() {
 
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
-  const publishers = [
+  const publishers: Publisher[] = [
     {
       name: "Accuris",
       description:
@@ -306,9 +316,8 @@ export default function Represent() {
                   <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
                     <div
                       className={`w-48 h-24 flex-shrink-0 rounded-lg flex items-center justify-center p-4 ${
-                        "bgClass" in pub
-                          ? (pub as any).bgClass
-                          : "bg-white border border-gray-100 dark:border-gray-600"
+                        pub.bgClass ??
+                        "bg-white border border-gray-100 dark:border-gray-600"
                       }`}
                     >
                       <img
@@ -317,7 +326,7 @@ export default function Represent() {
                         src={pub.logo}
                         alt={`${pub.name} Logo`}
                         className={`max-w-full max-h-full object-contain ${
-                          "imgClass" in pub ? (pub as any).imgClass : ""
+                          pub.imgClass ?? ""
                         }`}
                       />
                     </div>

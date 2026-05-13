@@ -8,6 +8,7 @@ import {
   CheckCircle2,
   Loader2,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { useState } from "react";
 import { useEffect } from "react";
 import contactPhoto from "../assets/Photos/About/001.webp";
@@ -82,7 +83,7 @@ export default function Contact() {
   }
 
   interface ContactItem {
-    icon: any;
+    icon: LucideIcon;
     title: string;
     details: ContactDetail[];
     link?: string;

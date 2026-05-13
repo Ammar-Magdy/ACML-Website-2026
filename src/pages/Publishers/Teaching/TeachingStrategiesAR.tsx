@@ -1,5 +1,3 @@
-import { ArrowLeft } from "lucide-react";
-
 // Images
 import wholeIcon from "./Whole.png";
 import dataIcon from "./Data.png";
@@ -36,10 +34,6 @@ import familyImg from "./Images/Tadpoles_Hero_iStock-878473646@2x.webp";
 import pdImg from "./Images/PD-hero-final-1.webp";
 import classroomImg from "./Images/ClassroomOverview_Hero.webp";
 
-import faviconImg from "./ms-icon-144x144.webp";
-import Footer from "../../../components/Footer";
-
-import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
 export default function TeachingStrategiesAR() {

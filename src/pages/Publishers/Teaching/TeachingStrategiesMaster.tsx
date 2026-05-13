@@ -2,7 +2,6 @@ import { ExternalLink, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import heroVideo from "./Videos/Teaching Strategies - Early Childhood Education Solutions.mp4";
-import faviconImg from "./ms-icon-144x144.webp";
 import { useEffect } from "react";
 export default function TeachingStrategiesMaster() {
   useEffect(() => {
