@@ -260,7 +260,7 @@ export default function Header() {
             className="flex items-center cursor-pointer group"
             onClick={onLinkClick}
           >
-            <AnimatedLogo className="h-20 w-36" />
+            <AnimatedLogo className="h-20 w-36"  />
             <div className="ms-3 text-sm font-bold hidden md:block border-l border-gray-300 dark:border-gray-700 pl-3">
               <span className="text-[#CB1F38]">ACML</span>{" "}
               <span className="text-[#317088]">
