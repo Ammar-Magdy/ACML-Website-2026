@@ -164,7 +164,7 @@ export default function ChairmanAr() {
                   <span className="mt-2 w-1.5 h-1.5 bg-emerald-500 rounded-full flex-shrink-0"></span>
                   <span>
                     <strong>
-                      الحاصل علس العضوية الشرفية لمعهد علماء المعلومات
+                      الحاصل علي العضوية الشرفية لمعهد علماء المعلومات
                     </strong>{" "}
                     (انتخب في 27 سبتمبر 1988) وقد اندمج بعد ذلك في الجمعية
                     المهنية للمكتبات والمعلومات - CILIP بإنجلترا
