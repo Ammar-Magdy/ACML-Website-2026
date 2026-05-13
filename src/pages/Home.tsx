@@ -54,7 +54,7 @@ export default function Home() {
       icon: Users,
       title: "Implemented Projects - Sample",
       description: "We introduce sample of some main sophisticated projects.",
-      path: "/about#projects-samples",
+      path: "/projects#projects-samples",
     },
     {
       icon: TrendingUp,

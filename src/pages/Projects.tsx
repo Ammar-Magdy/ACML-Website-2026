@@ -139,7 +139,7 @@ export default function Projects() {
           {/* ── Strategic Partners Section ───────────────────────── */}
           <section className="mb-16">
             {/* Section header */}
-            <div className="mb-10">
+            <div id="projects-samples" className="mb-10">
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-3 flex items-center">
                 <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center text-emerald-600 dark:text-emerald-400 mr-4 flex-shrink-0">
                   <Globe size={20} />

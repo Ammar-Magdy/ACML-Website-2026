@@ -294,7 +294,7 @@ export default function About() {
               </div>
 
               {/*Projects */}
-              <div id="projects-samples" className="space-y-4 scroll-mt-24">
+              <div  className="space-y-4 scroll-mt-24">
                 <h3 className="text-xl font-semibold text-emerald-600 dark:text-emerald-400 border-b border-emerald-200 dark:border-emerald-800 pb-2">
                   Samples of main projects
                 </h3>
