@@ -1,7 +1,6 @@
 ﻿import { useState } from "react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Search, ExternalLink, ArrowLeft } from "lucide-react";
+import { Search, ExternalLink} from "lucide-react";
 import { ebscoDatabases } from "../../data/ebscoDatabases";
 import { useEffect } from "react";
 

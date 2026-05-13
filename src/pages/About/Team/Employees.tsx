@@ -1,4 +1,4 @@
-import { Mail, Briefcase, Monitor } from 'lucide-react';
+import { Mail, Briefcase} from 'lucide-react';
 import { useEffect } from "react";
 
 export default function Employees() {

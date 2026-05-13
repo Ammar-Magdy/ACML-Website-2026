@@ -5,7 +5,6 @@ import {
   FolderOpen,
   PenTool,
   Users,
-  ExternalLink,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 

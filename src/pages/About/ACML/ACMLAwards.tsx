@@ -1,4 +1,3 @@
-import React from "react";
 import { Award, Star } from "lucide-react";
 
 import img1A from "../../../assets/Photos/About/Acml-Awards/1A.webp";
