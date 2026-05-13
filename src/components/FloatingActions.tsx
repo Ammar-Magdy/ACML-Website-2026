@@ -5,6 +5,7 @@ import musicFile from "../assets/Music/Wassermusik · Water-1.mp3";
 export default function FloatingActions() {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const isPlayingRef = useRef(false);
 
   // Constants
   const LEADER_KEY = "acml_music_leader";
@@ -14,6 +15,10 @@ export default function FloatingActions() {
   const tabId = useRef(Math.random().toString(36).substring(2, 9));
   // Track leadership status via ref for immediate access in event handlers
   const isLeaderRef = useRef(false);
+
+  useEffect(() => {
+    isPlayingRef.current = isPlaying;
+  }, [isPlaying]);
 
   useEffect(() => {
     const channel = new BroadcastChannel(CHANNEL_NAME);
@@ -69,7 +74,11 @@ export default function FloatingActions() {
       if (currentLeader === tabId.current) {
         // I am the leader, ensure I'm playing
         isLeaderRef.current = true;
-        if (!isPlaying && audioRef.current && audioRef.current.paused) {
+        if (
+          !isPlayingRef.current &&
+          audioRef.current &&
+          audioRef.current.paused
+        ) {
           setIsPlaying(true);
           audioRef.current.play().catch((e) => console.log(e));
         }
@@ -79,7 +88,7 @@ export default function FloatingActions() {
       } else {
         // Someone else is leader
         isLeaderRef.current = false;
-        if (isPlaying) {
+        if (isPlayingRef.current) {
           setIsPlaying(false);
           if (audioRef.current) audioRef.current.pause();
         }
