@@ -261,7 +261,7 @@ export default function Header() {
             onClick={onLinkClick}
           >
             <AnimatedLogo className="h-14 w-24 sm:h-16 sm:w-28 md:h-20 md:w-36 flex-shrink-0" />
-            <div className="min-w-0 text-xs md:text-sm font-bold hidden md:block border-l border-gray-300 dark:border-gray-700 pl-3 leading-tight truncate">
+            <div className="min-w-0 text-xs md:text-sm font-bold hidden md:block border-l border-gray-300 dark:border-gray-700 pl-3 leading-tight whitespace-normal">
               <span className="text-[#CB1F38]">ACML</span>{" "}
               <span className="text-[#317088]">
                 INTEGRATED INFORMATION SOLUTIONS & SYSTEMS
