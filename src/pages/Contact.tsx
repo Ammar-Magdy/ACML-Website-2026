@@ -71,9 +71,20 @@ export default function Contact() {
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >,
   ) => {
+    const { name, value } = e.target;
+
+    if (name === "phone") {
+      const digitsOnly = value.replace(/\D/g, "").slice(0, 13);
+      setFormData({
+        ...formData,
+        phone: digitsOnly,
+      });
+      return;
+    }
+
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value,
     });
   };
 
@@ -306,6 +317,25 @@ export default function Contact() {
 
                   <div>
                     <label
+                      htmlFor="name"
+                      className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
+                    >
+                      Job Title *
+                    </label>
+                    <input
+                      type="text"
+                      id="jobTitle"
+                      name="jobTitle"
+                      required
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                      placeholder="Manager, Engineer, Librarian, etc."
+                    />
+                  </div>
+
+                  <div className="md:col-span-2">
+                    <label
                       htmlFor="email"
                       className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
                     >
@@ -337,10 +367,15 @@ export default function Contact() {
                       id="phone"
                       name="phone"
                       required
+                      inputMode="numeric"
+                      pattern="\d{13}"
+                      minLength={13}
+                      maxLength={13}
+                      title="Enter exactly 13 digits"
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                      placeholder="+20 123 456 7890"
+                      placeholder="2012345678901"
                     />
                   </div>
 
@@ -349,12 +384,13 @@ export default function Contact() {
                       htmlFor="organization"
                       className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
                     >
-                      Organization
+                      Organization *
                     </label>
                     <input
                       type="text"
                       id="organization"
                       name="organization"
+                      required
                       value={formData.organization}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
