@@ -20,6 +20,7 @@ export default function Contact() {
 
   const [formData, setFormData] = useState({
     name: "",
+    jobTitle: "",
     email: "",
     phone: "",
     organization: "",
@@ -36,6 +37,7 @@ export default function Contact() {
     setStatus("submitting");
 
     const emailBody = `Name: ${formData.name}
+    Job Title: ${formData.jobTitle || "N/A"}
     Email: ${formData.email}
     Phone: ${formData.phone || "N/A"}
     Organization: ${formData.organization || "N/A"}
@@ -53,6 +55,7 @@ export default function Contact() {
     setStatus("success");
     setFormData({
       name: "",
+      jobTitle: "",
       email: "",
       phone: "",
       organization: "",
@@ -317,7 +320,7 @@ export default function Contact() {
 
                   <div>
                     <label
-                      htmlFor="name"
+                      htmlFor="jobTitle"
                       className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
                     >
                       Job Title *
@@ -327,7 +330,7 @@ export default function Contact() {
                       id="jobTitle"
                       name="jobTitle"
                       required
-                      value={formData.name}
+                      value={formData.jobTitle}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                       placeholder="Manager, Engineer, Librarian, etc."
