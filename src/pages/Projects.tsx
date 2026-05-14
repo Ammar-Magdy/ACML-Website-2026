@@ -150,12 +150,14 @@ export default function Projects() {
             </div>
 
             {/* Project card grid — 3 cols desktop / 2 tablet / 1 mobile */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {projects.map((project) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
+              {projects.map((project, index) => (
                 <Link
                   key={project.name}
                   to={project.path}
-                  className="group bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-8 flex flex-col items-center text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                  className={`group bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-8 flex flex-col items-center text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 lg:col-span-2 ${
+                    index === projects.length - 2 ? "lg:col-start-2" : ""
+                  } ${index === projects.length - 1 ? "lg:col-start-4" : ""}`}
                 >
                   {/* Logo */}
                   <div

@@ -28,45 +28,117 @@ export default function Contact() {
     message: "",
   });
 
-  const [status, setStatus] = useState<"idle" | "submitting" | "success">(
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">(
     "idle",
   );
+  const [errorMessage, setErrorMessage] = useState("");
+  const resetStatusAfterDelay = () => {
+    setTimeout(() => {
+      setStatus("idle");
+    }, 5000);
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("submitting");
+    setErrorMessage("");
 
-    const emailBody = `Name: ${formData.name}
-    Job Title: ${formData.jobTitle || "N/A"}
-    Email: ${formData.email}
-    Phone: ${formData.phone || "N/A"}
-    Organization: ${formData.organization || "N/A"}
-    Message:${formData.message}`;
+    try {
+      const trimmedFormData = {
+        name: formData.name.trim(),
+        jobTitle: formData.jobTitle.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone.trim(),
+        organization: formData.organization.trim(),
+        subject: formData.subject,
+        message: formData.message.trim(),
+      };
 
-    const mailtoUrl = `mailto:info@acml-egypt.com?subject=${encodeURIComponent(
-      formData.subject || "Contact form submission",
-    )}&body=${encodeURIComponent(emailBody)}`;
+      const requiredValues = [
+        trimmedFormData.name,
+        trimmedFormData.jobTitle,
+        trimmedFormData.email,
+        trimmedFormData.phone,
+        trimmedFormData.organization,
+        trimmedFormData.subject,
+        trimmedFormData.message,
+      ];
 
-    // Simulate slight delay so the loading UI spins cleanly
-    await new Promise((resolve) => setTimeout(resolve, 800));
+      if (requiredValues.some((value) => !value)) {
+        setStatus("error");
+        setErrorMessage("Please fill in all required fields.");
+        resetStatusAfterDelay();
+        return;
+      }
 
-    window.location.href = mailtoUrl;
+      if (!/^\d{13}$/.test(trimmedFormData.phone)) {
+        setStatus("error");
+        setErrorMessage("Phone number must be exactly 13 digits.");
+        resetStatusAfterDelay();
+        return;
+      }
 
-    setStatus("success");
-    setFormData({
-      name: "",
-      jobTitle: "",
-      email: "",
-      phone: "",
-      organization: "",
-      subject: "",
-      message: "",
-    });
+      const formDataToSend = new FormData();
+      formDataToSend.append("fullName", trimmedFormData.name);
+      formDataToSend.append("jobTitle", trimmedFormData.jobTitle);
+      formDataToSend.append("email", trimmedFormData.email);
+      formDataToSend.append("phone", trimmedFormData.phone);
+      formDataToSend.append("organization", trimmedFormData.organization);
+      formDataToSend.append("subject", trimmedFormData.subject);
+      formDataToSend.append("message", trimmedFormData.message);
 
-    // Auto-clear success message after 5 seconds
-    setTimeout(() => {
-      setStatus("idle");
-    }, 5000);
+      const response = await fetch("/send-contact.php", {
+        method: "POST",
+        body: formDataToSend,
+      });
+
+      const responseText = await response.text();
+      let result: { success: boolean; message?: string } | null = null;
+
+      try {
+        result = responseText
+          ? (JSON.parse(responseText) as { success: boolean; message?: string })
+          : null;
+      } catch {
+        throw new Error("Invalid server response. Please try again later.");
+      }
+
+      if (!response.ok) {
+        throw new Error(result?.message || "Failed to send message. Please try again.");
+      }
+
+      if (!result || typeof result.success !== "boolean") {
+        throw new Error("Invalid server response. Please try again later.");
+      }
+
+      if (result.success) {
+        setStatus("success");
+        setFormData({
+          name: "",
+          jobTitle: "",
+          email: "",
+          phone: "",
+          organization: "",
+          subject: "",
+          message: "",
+        });
+
+        // Auto-clear success message after 5 seconds
+        resetStatusAfterDelay();
+      } else {
+        setStatus("error");
+        setErrorMessage(result.message || "Failed to send message. Please try again.");
+        resetStatusAfterDelay();
+      }
+    } catch (error) {
+      setStatus("error");
+      const message =
+        error instanceof Error
+          ? error.message
+          : "An error occurred while sending your message. Please try again.";
+      setErrorMessage(message);
+      resetStatusAfterDelay();
+    }
   };
 
   const handleChange = (
@@ -77,7 +149,7 @@ export default function Contact() {
     const { name, value } = e.target;
 
     if (name === "phone") {
-      const digitsOnly = value.replace(/\D/g, "").slice(0, 13);
+      const digitsOnly = value.replace(/\D/g, "");
       setFormData({
         ...formData,
         phone: digitsOnly,
@@ -281,7 +353,7 @@ export default function Contact() {
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Modern Status Message */}
+                {/* Success Message */}
                 {status === "success" && (
                   <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-lg p-4 flex items-start animate-fade-in-up">
                     <CheckCircle2 className="w-5 h-5 text-emerald-500 mt-0.5 mr-3 flex-shrink-0" />
@@ -290,9 +362,25 @@ export default function Contact() {
                         Message Sent Successfully!
                       </h4>
                       <p className="text-emerald-700 text-sm mt-1">
-                        Thank you for reaching out. Your default email client
-                        should now be open with your message details ready to
-                        send.
+                        Thank you for reaching out. Our team will respond to your
+                        inquiry as soon as possible.
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {/* Error Message */}
+                {status === "error" && (
+                  <div className="bg-red-50 border border-red-200 text-red-800 rounded-lg p-4 flex items-start animate-fade-in-up">
+                    <div className="w-5 h-5 text-red-500 mt-0.5 mr-3 flex-shrink-0 flex items-center justify-center">
+                      <span className="text-lg font-bold">!</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-red-900">
+                        Error Sending Message
+                      </h4>
+                      <p className="text-red-700 text-sm mt-1">
+                        {errorMessage}
                       </p>
                     </div>
                   </div>
@@ -371,10 +459,6 @@ export default function Contact() {
                       name="phone"
                       required
                       inputMode="numeric"
-                      pattern="\d{13}"
-                      minLength={13}
-                      maxLength={13}
-                      title="Enter exactly 13 digits"
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
