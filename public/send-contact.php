@@ -33,13 +33,23 @@ $organization = trim($_POST['organization'] ?? '');
 $subject = trim($_POST['subject'] ?? '');
 $message = trim($_POST['message'] ?? '');
 
-$fullName = filter_var($fullName, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-$jobTitle = filter_var($jobTitle, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
+function cleanText($value) {
+    return trim(strip_tags($value));
+}
+
+function($value));function cleanHeader($value) {
+    return str_replace(["\r", "\n"], '', $value);
+}
+
+$fullName = cleanText($fullName);
+$jobTitle = cleanText($jobTitle);
 $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-$phone = filter_var($phone, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-$organization = filter_var($organization, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-$subject = filter_var($subject, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-$message = filter_var($message, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$phone = cleanText($phone);
+$organization = cleanText($organization);
+$subject = cleanHeader($subject);
+$message = cleanText($message);
+
 
 if (
     $fullName === '' ||
@@ -83,7 +93,7 @@ try {
     $mail->addReplyTo($email, $fullName);
 
     $mail->isHTML(false);
-    $mail->Subject = 'Contact Form Submission: ' . $subject;
+    $mail->Subject = $subject;
     $mail->Body =
         "Full Name: {$fullName}\n" .
         "Job Title: {$jobTitle}\n" .

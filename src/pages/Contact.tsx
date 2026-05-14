@@ -220,8 +220,7 @@ export default function Contact() {
     "Books & Periodicals",
     "Library Furniture & Supplies",
     "Other",
-    "Standards & Specifications (Publishers)",
-    "ICT Consultancy & Strategic Planning",
+    "Standards and International Societies (Publishers)",
     "Partnership Opportunities",
     "General Inquiry",
   ];

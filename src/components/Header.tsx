@@ -172,11 +172,6 @@ export default function Header() {
               path: "/publishers/demco",
               description: "Modern furniture for learning spaces.",
             },
-            {
-              label: "ICT Consultancy Services",
-              path: "/about/team",
-              description: "Expert ICT strategy and planning.",
-            },
           ],
         },
         {
