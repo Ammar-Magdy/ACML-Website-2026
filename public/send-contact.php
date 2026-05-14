@@ -38,7 +38,7 @@ function cleanText($value) {
     return trim(strip_tags($value));
 }
 
-function($value));function cleanHeader($value) {
+function cleanHeader($value) {
     return str_replace(["\r", "\n"], '', $value);
 }
 
