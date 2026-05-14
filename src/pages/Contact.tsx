@@ -338,38 +338,7 @@ export default function Contact() {
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Success Message */}
-                {status === "success" && (
-                  <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-lg p-4 flex items-start animate-fade-in-up">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-500 mt-0.5 mr-3 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-emerald-900">
-                        Message Sent Successfully!
-                      </h4>
-                      <p className="text-emerald-700 text-sm mt-1">
-                        Thank you for reaching out. Our team will respond to your
-                        inquiry as soon as possible.
-                      </p>
-                    </div>
-                  </div>
-                )}
-
-                {/* Error Message */}
-                {status === "error" && (
-                  <div className="bg-red-50 border border-red-200 text-red-800 rounded-lg p-4 flex items-start animate-fade-in-up">
-                    <div className="w-5 h-5 text-red-500 mt-0.5 mr-3 flex-shrink-0 flex items-center justify-center">
-                      <span className="text-lg font-bold">!</span>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-red-900">
-                        Error Sending Message
-                      </h4>
-                      <p className="text-red-700 text-sm mt-1">
-                        {errorMessage}
-                      </p>
-                    </div>
-                  </div>
-                )}
+ 
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -537,6 +506,38 @@ export default function Contact() {
                     )}
                   </button>
                 </div>
+                               {/* Success Message */}
+                {status === "success" && (
+                  <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-lg p-4 flex items-start animate-fade-in-up">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-500 mt-0.5 mr-3 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold text-emerald-900">
+                        Message Sent Successfully!
+                      </h4>
+                      <p className="text-emerald-700 text-sm mt-1">
+                        Thank you for reaching out. Our team will respond to your
+                        inquiry as soon as possible.
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {/* Error Message */}
+                {status === "error" && (
+                  <div className="bg-red-50 border border-red-200 text-red-800 rounded-lg p-4 flex items-start animate-fade-in-up">
+                    <div className="w-5 h-5 text-red-500 mt-0.5 mr-3 flex-shrink-0 flex items-center justify-center">
+                      <span className="text-lg font-bold">!</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-red-900">
+                        Error Sending Message
+                      </h4>
+                      <p className="text-red-700 text-sm mt-1">
+                        {errorMessage}
+                      </p>
+                    </div>
+                  </div>
+                )}
               </form>
             </div>
           </div>
