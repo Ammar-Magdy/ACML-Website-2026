@@ -63,7 +63,7 @@ export default function Services() {
     },
     {
       icon: FileText,
-      title: "Electronic Journals :Computers & Electronic",
+      title: "Electronic Journals : Computers & Electronic Media",
       path: "/publishers/acm#publications-services",
       image: imgEJournal,
       imageFit: "contain",

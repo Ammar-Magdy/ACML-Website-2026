@@ -21,14 +21,14 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: "SUEZ (SCA)",
+    name: "SUEZ CANAL AUTHORITY (SCA)",
     logo: suezLogo,
     path: "/about/projects/suez",
     description:
       "A sophisticated maritime intelligence project supporting vessel movement surveillance and analytics.",
   },
   {
-    name: "Elsewedy (PSP)",
+    name: "El Sewedy Electric (PSP)",
     logo: elsewedyLogo,
     path: "/about/projects/elsewedy",
     description:
@@ -36,7 +36,7 @@ const projects: Project[] = [
       logoBg: "#ffffff",
   },
   {
-    name: "APC",
+    name: "ALEXANDRIA PETROLEUM COMPANY (APC)",
     logo: apcLogo,
     path: "/about/projects/alx-pc",
     description:
