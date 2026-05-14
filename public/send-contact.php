@@ -59,10 +59,10 @@ function isValidEmail($email) {
 }
 
 /**
- * Validate phone number (13 digits)
+ * Validate phone number (10-15 digits)
  */
 function isValidPhone($phone) {
-    return preg_match('/^\d{13}$/', $phone) === 1;
+    return preg_match('/^\d{10,15}$/', $phone) === 1;
 }
 
 /**
@@ -97,6 +97,7 @@ $fullName = isset($_POST['fullName']) ? sanitizeInput($_POST['fullName']) : '';
 $jobTitle = isset($_POST['jobTitle']) ? sanitizeInput($_POST['jobTitle']) : '';
 $email = isset($_POST['email']) ? sanitizeInput($_POST['email']) : '';
 $phone = isset($_POST['phone']) ? sanitizeInput($_POST['phone']) : '';
+$phone = preg_replace('/\D/', '', $phone);
 $organization = isset($_POST['organization']) ? sanitizeInput($_POST['organization']) : '';
 $subject = isset($_POST['subject']) ? sanitizeInput($_POST['subject']) : '';
 $message = isset($_POST['message']) ? sanitizeInput($_POST['message']) : '';
@@ -125,7 +126,7 @@ if (!isValidEmail($email)) {
 
 // Validate phone number
 if (!isValidPhone($phone)) {
-    sendResponse(false, 'Invalid phone number. Please enter 13 digits.');
+    sendResponse(false, 'Invalid phone number. Please enter 10-15 digits.');
 }
 
 // Check SMTP password is set

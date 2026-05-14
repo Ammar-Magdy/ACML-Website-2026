@@ -19,7 +19,7 @@ export default function Contact() {
   }, []);
 
   const [formData, setFormData] = useState({
-    name: "",
+    fullName: "",
     jobTitle: "",
     email: "",
     phone: "",
@@ -45,7 +45,7 @@ export default function Contact() {
 
     try {
       const trimmedFormData = {
-        name: formData.name.trim(),
+        fullName: formData.fullName.trim(),
         jobTitle: formData.jobTitle.trim(),
         email: formData.email.trim(),
         phone: formData.phone.trim(),
@@ -55,7 +55,7 @@ export default function Contact() {
       };
 
       const requiredValues = [
-        trimmedFormData.name,
+        trimmedFormData.fullName,
         trimmedFormData.jobTitle,
         trimmedFormData.email,
         trimmedFormData.phone,
@@ -71,15 +71,15 @@ export default function Contact() {
         return;
       }
 
-      if (!/^\d{13}$/.test(trimmedFormData.phone)) {
+      if (!/^\d{10,15}$/.test(trimmedFormData.phone)) {
         setStatus("error");
-        setErrorMessage("Phone number must be exactly 13 digits.");
+        setErrorMessage("Phone number must be 10-15 digits.");
         resetStatusAfterDelay();
         return;
       }
 
       const formDataToSend = new FormData();
-      formDataToSend.append("fullName", trimmedFormData.name);
+      formDataToSend.append("fullName", trimmedFormData.fullName);
       formDataToSend.append("jobTitle", trimmedFormData.jobTitle);
       formDataToSend.append("email", trimmedFormData.email);
       formDataToSend.append("phone", trimmedFormData.phone);
@@ -92,29 +92,18 @@ export default function Contact() {
         body: formDataToSend,
       });
 
-      const responseText = await response.text();
-      let result: { success: boolean; message?: string } | null = null;
+      let result: { success?: boolean; message?: string } | null = null;
 
       try {
-        result = responseText
-          ? (JSON.parse(responseText) as { success: boolean; message?: string })
-          : null;
+        result = (await response.json()) as { success?: boolean; message?: string };
       } catch {
-        throw new Error("Invalid server response. Please try again later.");
+        throw new Error("Request failed");
       }
 
-      if (!response.ok) {
-        throw new Error(result?.message || "Failed to send message. Please try again.");
-      }
-
-      if (!result || typeof result.success !== "boolean") {
-        throw new Error("Invalid server response. Please try again later.");
-      }
-
-      if (result.success) {
+      if (result?.success === true) {
         setStatus("success");
         setFormData({
-          name: "",
+          fullName: "",
           jobTitle: "",
           email: "",
           phone: "",
@@ -127,16 +116,14 @@ export default function Contact() {
         resetStatusAfterDelay();
       } else {
         setStatus("error");
-        setErrorMessage(result.message || "Failed to send message. Please try again.");
+        setErrorMessage(result?.message || "Failed to send message. Please try again.");
         resetStatusAfterDelay();
       }
-    } catch (error) {
+    } catch {
       setStatus("error");
-      const message =
-        error instanceof Error
-          ? error.message
-          : "An error occurred while sending your message. Please try again.";
-      setErrorMessage(message);
+      setErrorMessage(
+        "An error occurred while sending your message. Please try again.",
+      );
       resetStatusAfterDelay();
     }
   };
@@ -149,7 +136,7 @@ export default function Contact() {
     const { name, value } = e.target;
 
     if (name === "phone") {
-      const digitsOnly = value.replace(/\D/g, "");
+      const digitsOnly = value.replace(/\D/g, "").slice(0, 15);
       setFormData({
         ...formData,
         phone: digitsOnly,
@@ -202,10 +189,9 @@ export default function Contact() {
       icon: Mail,
       title: "Email Us",
       details: [
-        { text: "info@acml-egypt.com", link: "mailto:info@acml-egypt.com" },
+        { text: "info@acml-egypt.com" },
         { text: "We respond within 24 hours" },
       ],
-      link: "mailto:info@acml-egypt.com",
     },
     {
       icon: Printer,
@@ -389,17 +375,17 @@ export default function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label
-                      htmlFor="name"
+                      htmlFor="fullName"
                       className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
                     >
                       Full Name *
                     </label>
                     <input
                       type="text"
-                      id="name"
-                      name="name"
+                      id="fullName"
+                      name="fullName"
                       required
-                      value={formData.name}
+                      value={formData.fullName}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                       placeholder="John Doe"
@@ -462,7 +448,7 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-                      placeholder="2012345678901"
+                      placeholder="01005001289"
                     />
                   </div>
 
