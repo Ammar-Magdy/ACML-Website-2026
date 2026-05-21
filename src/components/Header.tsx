@@ -457,7 +457,7 @@ export default function Header() {
               </div>
             ))}
 
-            <div className="mt-6 flex justify-end items-center px-2 pt-4 border-t border-gray-100 dark:border-gray-800">
+            <div className="flex justify-start items-center px-2 pt-4">
               <ThemeToggle />
             </div>
           </nav>
