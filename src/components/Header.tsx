@@ -164,6 +164,16 @@ export default function Header() {
             },
           ],
         },
+         {
+          title: "Standards",
+          links: [
+            {
+              label: "Digital Library of International Codes and Standards",
+              path: "/publishers#digital-library",
+              description: "Access to international codes and standards.",
+            },
+          ],
+        },
         {
           title: "Infrastructure & Consulting",
           links: [

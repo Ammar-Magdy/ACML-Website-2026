@@ -209,35 +209,43 @@ export default function Home() {
                 Learn More About Us
               </Link>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <img
-                loading="lazy"
-                decoding="async"
-                src={photo002}
-                alt="ACML E-Books and Journals"
-                className="rounded-lg shadow-lg w-full h-48 object-fill dark:opacity-90"
-              />
-              <img
-                loading="lazy"
-                decoding="async"
-                src={photo003}
-                alt="Library Collection"
-                className="rounded-lg shadow-lg w-full h-48 object-cover mt-8 dark:opacity-90"
-              />
-              <img
-                loading="lazy"
-                decoding="async"
-                src={photo004}
-                alt="Digital Solutions"
-                className="rounded-lg shadow-lg w-full h-48 object-cover dark:opacity-90"
-              />
-              <img
-                loading="lazy"
-                decoding="async"
-                src={photo005}
-                alt="ACML Mission"
-                className="rounded-lg shadow-lg w-full h-48 object-cover mt-8 dark:opacity-90"
-              />
+            <div className="home-image-grid">
+              <div className="home-image-card">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src={photo002}
+                  alt="ACML E-Books and Journals"
+                  className="home-image"
+                />
+              </div>
+              <div className="home-image-card">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src={photo003}
+                  alt="Library Collection"
+                  className="home-image"
+                />
+              </div>
+              <div className="home-image-card">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src={photo004}
+                  alt="Digital Solutions"
+                  className="home-image"
+                />
+              </div>
+              <div className="home-image-card">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src={photo005}
+                  alt="ACML Mission"
+                  className="home-image"
+                />
+              </div>
             </div>
           </div>
         </div>

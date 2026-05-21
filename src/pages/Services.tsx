@@ -153,8 +153,8 @@ export default function Services() {
             <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
               Comprehensive library and information technology solutions
               tailored to meet the unique needs of academic institutions,
-              research centers, and corporate libraries,Specially oil & gas
-              industries and other main industriel projects.
+              research centers, and corporate libraries, Specially oil & gas
+              industries and other main industrial projects.
             </p>
           </div>
         </div>
