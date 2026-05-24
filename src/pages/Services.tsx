@@ -40,12 +40,6 @@ export default function Services() {
       image: imgIndustry,
       description:
         "Pioneering digital library of international codes and standards for the oil & gas industry. Access to comprehensive collections of industry standards, technical codes, and best practices from leading organizations worldwide.",
-      // features: [
-      //   "Such as ASME, API, ASTM, IEEE, ASME, IEC, NFPA , ACI, SAE, and more",
-      //   "Comprehensive collection of industry standards",
-      //   "Regular updates and new releases",
-      //   "User-friendly search and navigation tools",
-      // ],
       features: [
         {
           label: "Such as ASME, API, ASTM, IEEE, ASME, IEC, NFPA , ACI, SAE, and more",
