@@ -7,6 +7,7 @@ import {
   FileText,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import type { ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -22,7 +23,7 @@ import pressreaderLogo from "../assets/Photos/Publishers/PressReader/Background.
 interface Service {
   icon: LucideIcon;
   title: string;
-  description: string;
+  description: ReactNode;
   features: (string | { label: string; path: string })[];
   linkId?: string;
   path?: string;
@@ -39,10 +40,17 @@ export default function Services() {
       path: "/publishers#digital-library",
       image: imgIndustry,
       description:
-        "Pioneering digital library of international codes and standards for the oil & gas industry. Access to comprehensive collections of industry standards, technical codes, and best practices from leading organizations worldwide.",
+        <>
+          Leading and Pioneering in building <span className="font-bold text-red-600">
+            "{"Digital Library of International Codes and Standards"}"
+          </span> for the industry activities, Especially in the oil & gas industry.
+          
+          Access to comprehensive collections of industry technical codes, standards, best practices from leading SDO`s organizations worldwide.
+        </>
+        ,
       features: [
         {
-          label: "Such as ASME, API, ASTM, IEEE, ASME, IEC, NFPA , ACI, SAE, and more",
+          label: "Such as ASME, API, AASHTO, AENOR, ACI, BSI, DIN, GHOST, IEEE, IEC, NFPA , SAE, and more",
           path: "/publishers#engineering-physical",
         },
         { label: "ACCURIS", 
