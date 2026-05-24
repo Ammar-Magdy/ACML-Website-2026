@@ -15,6 +15,8 @@ import imgDatabases from "../assets/Photos/Services/Databases-&-Full-Text-Access
 import imgEJournal from "../assets/Photos/Services/e-journal.webp";
 import imgFurniture from "../assets/Photos/Services/Library-Furniture.webp";
 import imgSoftware from "../assets/Photos/Services/Our-Software-Products.webp";
+import imgIndustry from "../assets/Photos/Services/Industry.webp";
+
 import pressreaderLogo from "../assets/Photos/Publishers/PressReader/Background.webp";
 
 interface Service {
@@ -31,6 +33,33 @@ interface Service {
 export default function Services() {
   const location = useLocation();
   const services: Service[] = [
+    {
+      icon: BookOpen,
+      title: "Digital Library of International Codes and Standards",
+      path: "/publishers#digital-library",
+      image: imgIndustry,
+      description:
+        "Pioneering digital library of international codes and standards for the oil & gas industry. Access to comprehensive collections of industry standards, technical codes, and best practices from leading organizations worldwide.",
+      // features: [
+      //   "Such as ASME, API, ASTM, IEEE, ASME, IEC, NFPA , ACI, SAE, and more",
+      //   "Comprehensive collection of industry standards",
+      //   "Regular updates and new releases",
+      //   "User-friendly search and navigation tools",
+      // ],
+      features: [
+        {
+          label: "Such as ASME, API, ASTM, IEEE, ASME, IEC, NFPA , ACI, SAE, and more",
+          path: "/publishers#engineering-physical",
+        },
+        { label: "ACCURIS", 
+          path: "/publishers/accuris" },
+        {
+          label: "SDO’s - Standards Development Organizations & International Societies",
+          path: "/publishers/standards",
+        },
+      ],
+      linkId: "books-periodicals",
+    },
     {
       icon: BookOpen,
       title: "Books & Periodicals :E-Forms",
