@@ -191,12 +191,13 @@ export default function Publishers() {
           id: "",
         },
         { name: "NFPA - National Fire Protection Association", id: "nfpa" },
+        { name: "UIC - International Union of Railways", id: "uic" },
         {
           name: "SDO’s - Standards Development Organizations & International Societies",
           id: "standards",
         },
-        { name: "UIC - International Union of Railways", id: "uic" },
         { name: "ETC...", },
+        
 
       ],
     },
