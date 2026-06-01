@@ -1,7 +1,8 @@
 import { Gift, Award, BookOpen, ExternalLink, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import sscgPdf from "../../../assets/PDF/About/Donations/SSCG-winners-full-details-1992_2025.pdf";
+import sscgPdf from "../../../assets/PDF/About/Donations/SSCG-winners-full-details-1992_2026.pdf";
+import sscgCountries from "../../../assets/PDF/About/Donations/SSCG-Template-winners-History-by-Countries.pdf";
 import kwiPdf from "../../../assets/PDF/About/Donations/KWI-ASRT-SS.pdf";
 import ielPdf from "../../../assets/PDF/About/Donations/Ideal-Egyptian-Librarian-(IEL).pdf";
 import ielterms from "../../../assets/PDF/About/Donations/Terms&Conditions.pdf";
@@ -88,7 +89,18 @@ export default function DonationsGrantsMaster() {
                       className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 inline-flex items-center gap-2 text-sm"
                     >
                       <FileText size={16} />
-                      SSCG winners full details 1992-2025
+                      SSCG winners full details 1992-2026
+                    </a>
+
+                    <a
+                      href={`${sscgCountries}#view=FitH`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      type="application/pdf"
+                      className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 inline-flex items-center gap-2 text-sm"
+                    >
+                      <FileText size={16} />
+                      SSCG winners history by countries 1992-2026
                     </a>
 
                     <a

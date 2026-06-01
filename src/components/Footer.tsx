@@ -23,7 +23,7 @@ export default function Footer() {
     { label: "Electronic Journals", path: "/services#electronic-journals" },
     { label: "Library Automation", path: "/services/librarian" },
     { label: "Publishers", path: "/publishers" },
-    { label: "Digital Library of International Codes and Standards", path: "/publishers#digital-library" }
+    { label: "Digital Library of International Codes and Standards", path: "/services#digital-library" }
   ];
 
   return (

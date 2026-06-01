@@ -60,7 +60,7 @@ export default function Services() {
           path: "/publishers/standards",
         },
       ],
-      linkId: "books-periodicals",
+      linkId: "digital-library",
     },
     {
       icon: BookOpen,
