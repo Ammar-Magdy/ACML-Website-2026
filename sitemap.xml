@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage - Highest Priority -->
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/</loc>
+    <loc>https://www.acml-egypt.com/</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -10,42 +10,42 @@
 
   <!-- Main Pages -->
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/services</loc>
+    <loc>https://www.acml-egypt.com/services</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers</loc>
+    <loc>https://www.acml-egypt.com/publishers</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/about</loc>
+    <loc>https://www.acml-egypt.com/about</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/partners</loc>
+    <loc>https://www.acml-egypt.com/partners</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/projects</loc>
+    <loc>https://www.acml-egypt.com/projects</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/contact</loc>
+    <loc>https://www.acml-egypt.com/contact</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -53,98 +53,98 @@
 
   <!-- About Subpages -->
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/about/mission</loc>
+    <loc>https://www.acml-egypt.com/about/mission</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/about/team/employees</loc>
+    <loc>https://www.acml-egypt.com/about/team/employees</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/about/represent</loc>
+    <loc>https://www.acml-egypt.com/about/represent</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/about/chairman</loc>
+    <loc>https://www.acml-egypt.com/about/chairman</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/about/chairman/awards</loc>
+    <loc>https://www.acml-egypt.com/about/chairman/awards</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/about/chairman/accomplishments</loc>
+    <loc>https://www.acml-egypt.com/about/chairman/accomplishments</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/about/chairman/clients</loc>
+    <loc>https://www.acml-egypt.com/about/chairman/clients</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/about/chairman/ar</loc>
+    <loc>https://www.acml-egypt.com/about/chairman/ar</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/about/donations-grants</loc>
+    <loc>https://www.acml-egypt.com/about/donations-grants</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/about/donations-grants/donations</loc>
+    <loc>https://www.acml-egypt.com/about/donations-grants/donations</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/about/donations-grants/adac</loc>
+    <loc>https://www.acml-egypt.com/about/donations-grants/adac</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/about/donations-grants/dr-shawky-grant</loc>
+    <loc>https://www.acml-egypt.com/about/donations-grants/dr-shawky-grant</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/about/donations-grants/kmi-grant</loc>
+    <loc>https://www.acml-egypt.com/about/donations-grants/kmi-grant</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/about/awards</loc>
+    <loc>https://www.acml-egypt.com/about/awards</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
@@ -152,35 +152,35 @@
 
   <!-- Project Pages -->
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/about/projects/suez</loc>
+    <loc>https://www.acml-egypt.com/about/projects/suez</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/about/projects/colas-rail</loc>
+    <loc>https://www.acml-egypt.com/about/projects/colas-rail</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/about/projects/enppi</loc>
+    <loc>https://www.acml-egypt.com/about/projects/enppi</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/about/projects/elsewedy</loc>
+    <loc>https://www.acml-egypt.com/about/projects/elsewedy</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/about/projects/alx-pc</loc>
+    <loc>https://www.acml-egypt.com/about/projects/alx-pc</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
@@ -188,28 +188,28 @@
 
   <!-- Services Subpages -->
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/services/bookshop</loc>
+    <loc>https://www.acml-egypt.com/services/bookshop</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/services/librarian</loc>
+    <loc>https://www.acml-egypt.com/services/librarian</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/services/mac</loc>
+    <loc>https://www.acml-egypt.com/services/mac</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/services/lawyer-mac</loc>
+    <loc>https://www.acml-egypt.com/services/lawyer-mac</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -217,56 +217,56 @@
 
   <!-- Publishers - Top Publishers -->
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/ebsco</loc>
+    <loc>https://www.acml-egypt.com/publishers/ebsco</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/taylor-francis</loc>
+    <loc>https://www.acml-egypt.com/publishers/taylor-francis</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/aiaa</loc>
+    <loc>https://www.acml-egypt.com/publishers/aiaa</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/esdu</loc>
+    <loc>https://www.acml-egypt.com/publishers/esdu</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/acm</loc>
+    <loc>https://www.acml-egypt.com/publishers/acm</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/thieme</loc>
+    <loc>https://www.acml-egypt.com/publishers/thieme</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/gtt</loc>
+    <loc>https://www.acml-egypt.com/publishers/gtt</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/hein</loc>
+    <loc>https://www.acml-egypt.com/publishers/hein</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -274,91 +274,91 @@
 
   <!-- Standards Publishers -->
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/aashto</loc>
+    <loc>https://www.acml-egypt.com/publishers/aashto</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/aci</loc>
+    <loc>https://www.acml-egypt.com/publishers/aci</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/ansi</loc>
+    <loc>https://www.acml-egypt.com/publishers/ansi</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/api</loc>
+    <loc>https://www.acml-egypt.com/publishers/api</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/asce</loc>
+    <loc>https://www.acml-egypt.com/publishers/asce</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/aws</loc>
+    <loc>https://www.acml-egypt.com/publishers/aws</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/asme</loc>
+    <loc>https://www.acml-egypt.com/publishers/asme</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/asme-bpvc</loc>
+    <loc>https://www.acml-egypt.com/publishers/asme-bpvc</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/astm</loc>
+    <loc>https://www.acml-egypt.com/publishers/astm</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/iec</loc>
+    <loc>https://www.acml-egypt.com/publishers/iec</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/uic</loc>
+    <loc>https://www.acml-egypt.com/publishers/uic</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/ipr</loc>
+    <loc>https://www.acml-egypt.com/publishers/ipr</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/astm-ptp</loc>
+    <loc>https://www.acml-egypt.com/publishers/astm-ptp</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -366,231 +366,231 @@
 
   <!-- Specialty Publishers -->
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/chemwatch</loc>
+    <loc>https://www.acml-egypt.com/publishers/chemwatch</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/chemwatch/en</loc>
+    <loc>https://www.acml-egypt.com/publishers/chemwatch/en</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/chemwatch/ar</loc>
+    <loc>https://www.acml-egypt.com/publishers/chemwatch/ar</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/haystack-gold</loc>
+    <loc>https://www.acml-egypt.com/publishers/haystack-gold</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/icao</loc>
+    <loc>https://www.acml-egypt.com/publishers/icao</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/nfpa</loc>
+    <loc>https://www.acml-egypt.com/publishers/nfpa</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/sae</loc>
+    <loc>https://www.acml-egypt.com/publishers/sae</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/siam</loc>
+    <loc>https://www.acml-egypt.com/publishers/siam</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/aip</loc>
+    <loc>https://www.acml-egypt.com/publishers/aip</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/ils</loc>
+    <loc>https://www.acml-egypt.com/publishers/ils</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/3b-scientific</loc>
+    <loc>https://www.acml-egypt.com/publishers/3b-scientific</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/primal-pictures</loc>
+    <loc>https://www.acml-egypt.com/publishers/primal-pictures</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/jaypee</loc>
+    <loc>https://www.acml-egypt.com/publishers/jaypee</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/endnote</loc>
+    <loc>https://www.acml-egypt.com/publishers/endnote</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/pressreader</loc>
+    <loc>https://www.acml-egypt.com/publishers/pressreader</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/loc</loc>
+    <loc>https://www.acml-egypt.com/publishers/loc</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/oclc</loc>
+    <loc>https://www.acml-egypt.com/publishers/oclc</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/sp-global</loc>
+    <loc>https://www.acml-egypt.com/publishers/sp-global</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/accuris</loc>
+    <loc>https://www.acml-egypt.com/publishers/accuris</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/janes</loc>
+    <loc>https://www.acml-egypt.com/publishers/janes</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/asnt</loc>
+    <loc>https://www.acml-egypt.com/publishers/asnt</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/ebsco-databases</loc>
+    <loc>https://www.acml-egypt.com/publishers/ebsco-databases</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/ebsco-military</loc>
+    <loc>https://www.acml-egypt.com/publishers/ebsco-military</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/standards</loc>
+    <loc>https://www.acml-egypt.com/publishers/standards</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/demco</loc>
+    <loc>https://www.acml-egypt.com/publishers/demco</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/gaylord</loc>
+    <loc>https://www.acml-egypt.com/publishers/gaylord</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/hannecke</loc>
+    <loc>https://www.acml-egypt.com/publishers/hannecke</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/arctic</loc>
+    <loc>https://www.acml-egypt.com/publishers/arctic</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/bloomsbury</loc>
+    <loc>https://www.acml-egypt.com/publishers/bloomsbury</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/harmattan</loc>
+    <loc>https://www.acml-egypt.com/publishers/harmattan</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/teaching</loc>
+    <loc>https://www.acml-egypt.com/publishers/teaching</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/teaching/en</loc>
+    <loc>https://www.acml-egypt.com/publishers/teaching/en</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://ammar-magdy.github.io/ACML-Website-2026/publishers/teaching/ar</loc>
+    <loc>https://www.acml-egypt.com/publishers/teaching/ar</loc>
     <lastmod>2026-05-12T00:00:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

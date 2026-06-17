@@ -2,7 +2,7 @@
 # Allow all search engines to crawl public content
 
 User-agent: *
-Allow: /ACML-Website-2026/
+Allow: /*/
 Disallow: /admin/
 Disallow: /*.json$
 Disallow: /*?sort=
@@ -23,22 +23,22 @@ Disallow: /
 
 # Allow Google, Bing, Yandex, Baidu, DuckDuckGo
 User-agent: Googlebot
-Allow: /ACML-Website-2026/
+Allow: /*/
 
 User-agent: Bingbot
-Allow: /ACML-Website-2026/
+Allow: /*/
 
 User-agent: Yandexbot
-Allow: /ACML-Website-2026/
+Allow: /*/
 
 User-agent: Baiduspider
-Allow: /ACML-Website-2026/
+Allow: /*/
 
 User-agent: DuckDuckBot
-Allow: /ACML-Website-2026/
+Allow: /*/
 
 # Crawl-delay for respectful crawling (optional)
 # Crawl-delay: 1
 
 # Sitemap location - UPDATE THIS with your actual domain
-Sitemap: https://ammar-magdy.github.io/ACML-Website-2026/sitemap.xml
+Sitemap: https://www.acml-egypt.com/sitemap.xml
