@@ -40,7 +40,7 @@ export default function MAC() {
       </div>
 
       {/* Main Content */}
-      <div className="mr-20 ml-20">
+      <div className="lg:mx-20 md:mx-10 mx-0">
         <div className="container mx-auto px-4 py-12 animate-fade-in-up">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Column - Main Info */}
