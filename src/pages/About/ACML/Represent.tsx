@@ -10,7 +10,6 @@ import logoBentham from "../../../assets/Photos/About/ACML-Represents/Bentham-Sc
 import logoChemWatch from "../../../assets/Photos/About/ACML-Represents/ChemWatch.webp";
 import logoCBD from "../../../assets/Photos/About/ACML-Represents/Conservation-by-Design.webp";
 import logoEBSCO from "../../../assets/Photos/About/ACML-Represents/EBSCO.webp";
-import logoEndNote from "../../../assets/Photos/About/ACML-Represents/End-Note.webp";
 import logoGasMatters from "../../../assets/Photos/About/ACML-Represents/Gas-Matters.webp";
 import logoGaylord from "../../../assets/Photos/About/ACML-Represents/Gaylord-Archival.webp";
 import logoHannecke from "../../../assets/Photos/About/ACML-Represents/Hannecke.webp";
@@ -129,15 +128,6 @@ export default function Represent() {
       territory: "Egypt",
       url: "https://www.ebsco.com/",
       logo: logoEBSCO,
-      imgClass: "scale-150",
-    },
-    {
-      name: "End Note",
-      description:
-        "Millions of researchers, scholarly writers, students, and librarians use Endnote (patent pending) to search online bibliographic databases, organize their references, images and PDFs in any language, and create bibliographies and figure lists instantly.",
-      territory: "Egypt, Sudan and Middle East",
-      url: "https://endnote.com/",
-      logo: logoEndNote,
       imgClass: "scale-150",
     },
     {

@@ -72,7 +72,6 @@ export default function Publishers() {
     {
       category: "Library & Information Science Tools",
       organizations: [
-        { name: "EndNote", id: "endnote" },
         { name: "PressReader", id: "pressreader" },
         { name: "Library of Congress", id: "loc" },
         { name: "OCLC - Online Computer Library Center", id: "oclc" },

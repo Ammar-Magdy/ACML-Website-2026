@@ -70,7 +70,7 @@ import PublisherILS from "./pages/Publishers/PublisherILS";
 import Publisher3BScientific from "./pages/Publishers/Publisher3BScientific";
 import PublisherPrimalPictures from "./pages/Publishers/PublisherPrimalPictures";
 import PublisherJaypee from "./pages/Publishers/PublisherJaypee";
-import PublisherEndNote from "./pages/Publishers/PublisherEndNote";
+
 import PublisherPressReader from "./pages/Publishers/PublisherPressReader";
 import PublisherLibraryOfCongress from "./pages/Publishers/PublisherLibraryOfCongress";
 import PublisherOCLC from "./pages/Publishers/PublisherOCLC";
@@ -244,10 +244,7 @@ function App() {
                 element={<PublisherPrimalPictures />}
               />
               <Route path="/publishers/jaypee" element={<PublisherJaypee />} />
-              <Route
-                path="/publishers/endnote"
-                element={<PublisherEndNote />}
-              />
+            
               <Route
                 path="/publishers/accuris"
                 element={<PublisherAccuris />}
