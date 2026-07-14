@@ -372,12 +372,6 @@ export const searchData = [
     keywords: "jaypee medical publishing healthcare",
   },
   {
-    id: "/publishers/endnote",
-    title: "EndNote",
-    description: "Reference management software",
-    keywords: "endnote referencing citing research",
-  },
-  {
     id: "/publishers/accuris",
     title: "Accuris",
     description: "Engineering intelligence solutions",
