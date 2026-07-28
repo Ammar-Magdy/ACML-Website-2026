@@ -1,9 +1,12 @@
 import { useState, useRef, useEffect } from "react";
-import { Music, VolumeX, Mail } from "lucide-react";
+import confetti from "canvas-confetti";
+import { Music, VolumeX, Mail, Trophy, X } from "lucide-react";
 import musicFile from "../assets/Music/Wassermusik · Water-1.mp3";
+import awardImage from "../assets/Award/Award.webp";
 
 export default function FloatingActions() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isAwardOpen, setIsAwardOpen] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const isPlayingRef = useRef(false);
 
@@ -19,6 +22,28 @@ export default function FloatingActions() {
   useEffect(() => {
     isPlayingRef.current = isPlaying;
   }, [isPlaying]);
+
+  useEffect(() => {
+    if (!isAwardOpen) {
+      return;
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsAwardOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isAwardOpen]);
 
   useEffect(() => {
     const channel = new BroadcastChannel(CHANNEL_NAME);
@@ -151,6 +176,35 @@ export default function FloatingActions() {
     }
   };
 
+  const triggerAwardCelebration = () => {
+    confetti({
+      particleCount: 140,
+      spread: 85,
+      startVelocity: 34,
+      origin: { y: 0.62 },
+      colors: ["#10b981", "#34d399", "#facc15", "#f8fafc"],
+    });
+
+    window.setTimeout(() => {
+      confetti({
+        particleCount: 70,
+        angle: 60,
+        spread: 60,
+        origin: { x: 0, y: 0.7 },
+        colors: ["#10b981", "#facc15", "#f8fafc"],
+      });
+      confetti({
+        particleCount: 70,
+        angle: 120,
+        spread: 60,
+        origin: { x: 1, y: 0.7 },
+        colors: ["#10b981", "#facc15", "#f8fafc"],
+      });
+    }, 180);
+
+    setIsAwardOpen(true);
+  };
+
   return (
     <>
       {/* Background Music Player - Bottom Left */}
@@ -176,17 +230,79 @@ export default function FloatingActions() {
         </button>
       </div>
 
-      {/* Email / Contact Button - Bottom Right */}
+      {/* Award Button - Bottom Right */}
       <div className="fixed bottom-20 right-10 z-50">
+        <button
+          onClick={triggerAwardCelebration}
+          className="flex h-14 w-14 items-center justify-center rounded-full border border-gray-200 bg-white text-amber-500 shadow-lg transition-all duration-300 hover:scale-110 hover:text-amber-600 dark:border-gray-700 dark:bg-gray-800 dark:text-amber-400"
+          aria-label="View company award"
+          title="View company award"
+        >
+          <Trophy size={24} />
+        </button>
+      </div>
+
+      {/* Email / Contact Button - Bottom Right */}
+      <div className="fixed bottom-5 right-10 z-50">
         <a
           href="mailto:info@acml-egypt.com"
-          className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-700 hover:scale-110 transition-all duration-300 text-emerald-600 dark:text-emerald-500 flex items-center justify-center group"
+          className="flex h-14 w-14 items-center justify-center rounded-full border border-gray-200 bg-white text-emerald-600 shadow-lg transition-all duration-300 hover:scale-110 dark:border-gray-700 dark:bg-gray-800 dark:text-emerald-500"
           aria-label="Contact Us"
           title="Contact Us"
         >
           <Mail size={24} />
         </a>
       </div>
+
+      {isAwardOpen && (
+        <div
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 px-4 py-8 backdrop-blur-sm"
+          onClick={() => setIsAwardOpen(false)}
+          role="presentation"
+        >
+          <div
+            className="relative w-full max-w-6xl overflow-hidden rounded-3xl border border-white/10 bg-slate-950 shadow-2xl"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Company award"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setIsAwardOpen(false)}
+              className="absolute right-4 top-4 z-10 inline-flex h-11 w-11 items-center justify-center rounded-full bg-black/50 text-white transition hover:bg-black/70"
+              aria-label="Close award modal"
+              title="Close"
+            >
+              <X size={20} />
+            </button>
+
+            <div className="grid gap-0 md:grid-cols-[1.45fr_0.85fr]">
+              <div className="flex items-center justify-center bg-gradient-to-br from-emerald-950 via-slate-950 to-slate-900 p-4 md:p-6">
+                <img
+                  src={awardImage}
+                  alt="Company award"
+                  className="max-h-[88vh] w-full max-w-full rounded-2xl object-contain shadow-2xl"
+                />
+              </div>
+
+              <div className="flex flex-col justify-center gap-4 bg-slate-950 p-6 text-white md:p-8">
+                <div className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-[0.28em] text-amber-300">
+                  <Trophy size={16} />
+                  Award Highlight
+                </div>
+                <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
+                  Celebrating Excellence
+                </h2>
+                <p className="max-w-md text-sm leading-6 text-slate-300 md:text-base">
+                  This recognition reflects our commitment to quality, impact,
+                  and long-term value for partners and clients.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
