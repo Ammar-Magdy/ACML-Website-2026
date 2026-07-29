@@ -9,6 +9,7 @@ export default function FloatingActions() {
   const [isAwardOpen, setIsAwardOpen] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const isPlayingRef = useRef(false);
+  const confettiIntervalRef = useRef<number | null>(null);
 
   // Constants
   const LEADER_KEY = "acml_music_leader";
@@ -27,7 +28,6 @@ export default function FloatingActions() {
     if (!isAwardOpen) {
       return;
     }
-
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
@@ -37,13 +37,81 @@ export default function FloatingActions() {
       }
     };
 
+    // Initial confetti burst(s)
+    confetti({
+      particleCount: 140,
+      spread: 85,
+      startVelocity: 34,
+      origin: { y: 0.62 },
+      colors: ["#10b981", "#34d399", "#facc15", "#f8fafc"],
+    });
+
+    window.setTimeout(() => {
+      confetti({
+        particleCount: 70,
+        angle: 60,
+        spread: 60,
+        origin: { x: 0, y: 0.7 },
+        colors: ["#10b981", "#facc15", "#f8fafc"],
+      });
+      confetti({
+        particleCount: 70,
+        angle: 120,
+        spread: 60,
+        origin: { x: 1, y: 0.7 },
+        colors: ["#10b981", "#facc15", "#f8fafc"],
+      });
+    }, 180);
+
+    // Start repeating confetti while modal is open
+    const startConfettiLoop = () => {
+      if (confettiIntervalRef.current) return;
+      confettiIntervalRef.current = window.setInterval(() => {
+        confetti({
+          particleCount: 50,
+          angle: 60,
+          spread: 50,
+          origin: { x: 0, y: 0.6 },
+          colors: ["#10b981", "#facc15", "#f8fafc"],
+        });
+        confetti({
+          particleCount: 50,
+          angle: 120,
+          spread: 50,
+          origin: { x: 1, y: 0.6 },
+          colors: ["#10b981", "#facc15", "#f8fafc"],
+        });
+      }, 2000);
+    };
+
+    const stopConfettiLoop = () => {
+      if (confettiIntervalRef.current) {
+        window.clearInterval(confettiIntervalRef.current);
+        confettiIntervalRef.current = null;
+      }
+    };
+
     window.addEventListener("keydown", handleKeyDown);
+
+    // start loop
+    startConfettiLoop();
 
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = previousOverflow;
+      stopConfettiLoop();
     };
   }, [isAwardOpen]);
+
+  // Ensure confetti loop is cleared on unmount
+  useEffect(() => {
+    return () => {
+      if (confettiIntervalRef.current) {
+        window.clearInterval(confettiIntervalRef.current);
+        confettiIntervalRef.current = null;
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const channel = new BroadcastChannel(CHANNEL_NAME);
@@ -149,7 +217,7 @@ export default function FloatingActions() {
 
     // --- On Mount ---
     // Delay slightly to ensure DOM is ready and allow other tabs to settle if simultaneous reload
-    setTimeout(checkState, 100);
+    setTimeout(checkState, 2000);
 
     return () => {
       channel.close();
@@ -177,31 +245,7 @@ export default function FloatingActions() {
   };
 
   const triggerAwardCelebration = () => {
-    confetti({
-      particleCount: 140,
-      spread: 85,
-      startVelocity: 34,
-      origin: { y: 0.62 },
-      colors: ["#10b981", "#34d399", "#facc15", "#f8fafc"],
-    });
-
-    window.setTimeout(() => {
-      confetti({
-        particleCount: 70,
-        angle: 60,
-        spread: 60,
-        origin: { x: 0, y: 0.7 },
-        colors: ["#10b981", "#facc15", "#f8fafc"],
-      });
-      confetti({
-        particleCount: 70,
-        angle: 120,
-        spread: 60,
-        origin: { x: 1, y: 0.7 },
-        colors: ["#10b981", "#facc15", "#f8fafc"],
-      });
-    }, 180);
-
+    // Open the award modal — confetti is handled while modal is open
     setIsAwardOpen(true);
   };
 
@@ -230,19 +274,7 @@ export default function FloatingActions() {
         </button>
       </div>
 
-      {/* Award Button - Bottom Right */}
-      <div className="fixed bottom-20 right-10 z-50">
-        <button
-          onClick={triggerAwardCelebration}
-          className="flex h-14 w-14 items-center justify-center rounded-full border border-gray-200 bg-white text-amber-500 shadow-lg transition-all duration-300 hover:scale-110 hover:text-amber-600 dark:border-gray-700 dark:bg-gray-800 dark:text-amber-400"
-          aria-label="View company award"
-          title="View company award"
-        >
-          <Trophy size={24} />
-        </button>
-      </div>
-
-      {/* Email / Contact Button - Bottom Right */}
+    {/* Email / Contact Button - Bottom Right */}
       <div className="fixed bottom-5 right-10 z-50">
         <a
           href="mailto:info@acml-egypt.com"
@@ -252,6 +284,18 @@ export default function FloatingActions() {
         >
           <Mail size={24} />
         </a>
+      </div>
+
+      {/* Award Button - Bottom Right */}
+      <div className="fixed bottom-20 right-10 z-50">
+        <button
+          onClick={triggerAwardCelebration}
+          className="flex h-14 w-14 items-center justify-center rounded-full border border-gray-200 bg-white text-amber-500 shadow-lg transition-all duration-300 hover:scale-110 hover:text-amber-600 dark:border-gray-700 dark:bg-gray-800 dark:text-amber-400"
+          aria-label="View Company Award"
+          title="View Company Award"
+        >
+          <Trophy size={24} />
+        </button>
       </div>
 
       {isAwardOpen && (
@@ -277,12 +321,12 @@ export default function FloatingActions() {
               <X size={20} />
             </button>
 
-            <div className="grid gap-0 md:grid-cols-[1.45fr_0.85fr]">
-              <div className="flex items-center justify-center bg-gradient-to-br from-emerald-950 via-slate-950 to-slate-900 p-4 md:p-6">
+            <div className="grid gap-0 md:grid-cols-[1.25fr_0.85fr]">
+              <div className="flex items-center justify-center bg-gradient-to-br from-emerald-950 via-slate-950 to-slate-900 p-2 md:p-2">
                 <img
                   src={awardImage}
                   alt="Company award"
-                  className="max-h-[88vh] w-full max-w-full rounded-2xl object-contain shadow-2xl"
+                  className=" rounded-2xl object-contain shadow-2xl"
                 />
               </div>
 
