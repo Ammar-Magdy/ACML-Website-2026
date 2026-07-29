@@ -289,14 +289,14 @@ export default function FloatingActions() {
               <div className="flex flex-col justify-center gap-4 bg-slate-950 p-6 text-white md:p-8">
                 <div className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-[0.28em] text-amber-300">
                   <Trophy size={16} />
-                  Award Highlight
+                  Award Highlights
                 </div>
                 <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
                   Celebrating Excellence
                 </h2>
                 <p className="max-w-md text-sm leading-6 text-slate-300 md:text-base">
                   This recognition reflects our commitment to quality, impact,
-                  and long-term value for partners and clients.
+                  and long-term value for partners and clients in Egypt & Arab World.
                 </p>
               </div>
             </div>
