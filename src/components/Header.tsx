@@ -268,7 +268,7 @@ export default function Header() {
             <AnimatedLogo className="h-14 w-24 sm:h-16 sm:w-28 md:h-20 md:w-36 flex-shrink-0" />
             <div className="min-w-0 text-xs md:text-sm  hidden md:block border-l border-gray-300 dark:border-gray-700 pl-3 leading-tight whitespace-normal">
               <span className="text-[#CB1F38] font-bold">ACML</span>{" "}
-              <span className="text-[#317088]">
+              <span className="text-[#317088] font-bold">
                  <span className="text-[#CB1F38] font-bold text-xl">I</span>NTEGRATED <span className="text-[#CB1F38] font-bold text-xl">I</span>NFORMATION <span className="text-[#CB1F38] font-bold text-xl">S</span>OLUTIONS & <span className="text-[#CB1F38] font-bold text-xl">S</span>YSTEMS
               </span>
             </div>
