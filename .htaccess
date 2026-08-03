@@ -33,3 +33,19 @@ Options -Indexes
   Header set X-Frame-Options "SAMEORIGIN"
   Header set X-XSS-Protection "1; mode=block"
 </IfModule>
+<IfModule mod_mime.c>
+    AddType text/javascript .mjs
+    AddType application/pdf .pdf
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Serve real files and directories without sending them to React
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # React SPA fallback
+    RewriteRule ^ index.html [L]
+</IfModule>
