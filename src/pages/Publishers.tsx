@@ -22,11 +22,11 @@ export default function Publishers() {
   }, []);
 
   // Deployment-safe public PDF URL.
-  // Place the PDF file at: public/assets/pdf/digital-library-overview.pdf
-  // Use a simple lowercase filename (Linux hosts are case-sensitive).
+  // The PDF has been moved to: public/pdf/publishers/codes/codes.pdf (lowercase)
+  // Vite's base is respected so it works at root or in a subdirectory.
   const publicBase = import.meta.env.BASE_URL ?? "/";
-  const publicPdfPath = "../assets/PDF/Publishers/Codes/Codes.pdf"; // relative to BASE_URL
-  const DigitalLibraryOverviewPdf = `${publicBase}${publicPdfPath.replace(/^\/+/, "")}`;
+  const publicPdfPath = "pdf/publishers/codes/codes.pdf"; // relative to BASE_URL
+  const pdfUrl = `${publicBase}${publicPdfPath.replace(/^\/+/, "")}`;
 
   const location = useLocation();
   const publisherBodies = [
@@ -439,7 +439,7 @@ export default function Publishers() {
       <PDFPreviewModal
         isOpen={isPdfPreviewOpen}
         onClose={() => setIsPdfPreviewOpen(false)}
-        pdfUrl={DigitalLibraryOverviewPdf}
+        pdfUrl={pdfUrl}
         title={previewItemTitle}
         triggerRef={pdfPreviewTriggerRef}
       />

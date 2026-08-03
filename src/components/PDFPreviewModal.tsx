@@ -96,7 +96,7 @@ export default function PDFPreviewModal({
     }
 
     let isCancelled = false;
-    let loadingTask: any = null;
+    let loadingTask: ReturnType<typeof getDocument> | null = null;
     const controller = new AbortController();
     const timeoutMs = 30000; // 30 seconds
     let timeoutId: number | null = null;
