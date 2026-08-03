@@ -5,7 +5,7 @@ import {
   Facebook,
   Linkedin,
   Youtube,
-  Twitter,
+  X,
 } from "lucide-react";
 
 import { Link } from "react-router-dom";
@@ -49,9 +49,9 @@ export default function Footer() {
               <a
                 href="#"
                 className="hover:text-emerald-400 transition-colors"
-                aria-label="Twitter"
+                aria-label="X"
               >
-                <Twitter size={20} />
+                <X size={20} />
               </a>
               <a
                 href="#"
