@@ -12,7 +12,10 @@ import {
 import { RefObject, useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { GlobalWorkerOptions, getDocument, type PDFDocumentProxy } from "pdfjs-dist";
-import pdfWorker from "pdfjs-dist/build/pdf.worker.min.mjs?url";
+
+// Configure PDF.js worker in a Vite-compatible, deployment-safe way.
+// Use new URL(...) with import.meta.url so Vite resolves and emits the worker file
+// into the dist assets and produces a correct hashed URL at build time.
 
 type PDFPreviewModalProps = {
   isOpen: boolean;
@@ -24,7 +27,23 @@ type PDFPreviewModalProps = {
 
 type LoadState = "loading" | "ready" | "error";
 
-GlobalWorkerOptions.workerSrc = pdfWorker;
+// Set the workerSrc using Vite-friendly resolution. This tells PDF.js where
+// to load its ES module worker from. Vite will rewrite the URL at build time
+// to point to the hashed asset in dist.
+try {
+  // Use the worker file that exists in the installed pdfjs-dist package.
+  // Prefer the modern ES module build path.
+  GlobalWorkerOptions.workerSrc = new URL(
+    "pdfjs-dist/build/pdf.worker.min.mjs",
+    import.meta.url,
+  ).toString();
+} catch (err) {
+  // Fallback: leave workerSrc unset and let pdf.js attempt default behavior.
+  // Provide a dev-time diagnostic.
+  if (typeof console !== "undefined" && !import.meta.env.PROD) {
+    console.error("Failed to configure PDF.js workerSrc:", err);
+  }
+}
 
 const FOCUSABLE_SELECTOR =
   'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
@@ -163,10 +182,32 @@ export default function PDFPreviewModal({
           return;
         }
 
-        const message =
+        let message =
           error instanceof Error
             ? error.message
             : "Unable to load the PDF file right now. Please try again.";
+
+        // Detect worker-specific failures and provide clearer developer guidance
+        const lowerMsg = (message || "").toLowerCase();
+        if (
+          lowerMsg.includes("setting up fake worker failed") ||
+          lowerMsg.includes("failed to fetch dynamically imported module") ||
+          lowerMsg.includes("worker-src") ||
+          lowerMsg.includes("pdf.worker")
+        ) {
+          // User-facing minimal message
+          message = "PDF rendering worker failed to load. Open the browser console for details.";
+
+          // Dev-only diagnostics
+          if (!import.meta.env.PROD) {
+            console.error("PDF worker load error", { pdfUrl, rawError: error, base: import.meta.env.BASE_URL });
+            // Provide a suggested worker configuration to check
+            console.info(
+              "Suggested workerSrc configuration (Vite):",
+              "GlobalWorkerOptions.workerSrc = new URL('pdfjs-dist/build/pdf.worker.min.mjs', import.meta.url).toString();",
+            );
+          }
+        }
 
         // Dev-only detailed logging
         if (!import.meta.env.PROD) {
