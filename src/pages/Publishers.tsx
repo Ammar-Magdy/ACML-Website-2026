@@ -1,11 +1,32 @@
-import { Shield, FileText, Globe, Search, Download, Lock } from "lucide-react";
+import {
+  Shield,
+  FileText,
+  Globe,
+  Search,
+  Download,
+  Lock,
+  CheckCircle2,
+} from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
+import PDFPreviewModal from "../components/PDFPreviewModal";
 
 export default function Publishers() {
+  const previewItemTitle =
+    "شرح لمفهوم المكتبة الرقمية للأكواد والمواصفات الدولية";
+  const [isPdfPreviewOpen, setIsPdfPreviewOpen] = useState(false);
+  const pdfPreviewTriggerRef = useRef<HTMLButtonElement>(null);
+
   useEffect(() => {
     document.title = "Publishers";
   }, []);
+
+  // Deployment-safe public PDF URL.
+  // Place the PDF file at: public/assets/pdf/digital-library-overview.pdf
+  // Use a simple lowercase filename (Linux hosts are case-sensitive).
+  const publicBase = import.meta.env.BASE_URL ?? "/";
+  const publicPdfPath = "../assets/PDF/Publishers/Codes/Codes.pdf"; // relative to BASE_URL
+  const DigitalLibraryOverviewPdf = `${publicBase}${publicPdfPath.replace(/^\/+/, "")}`;
 
   const location = useLocation();
   const publisherBodies = [
@@ -195,6 +216,10 @@ export default function Publishers() {
           name: "SDO’s - Standards Development Organizations & International Societies",
           id: "standards",
         },
+        {
+          name: previewItemTitle,
+          id: "",
+        },
         { name: "ETC...", },
         
 
@@ -352,36 +377,57 @@ export default function Publishers() {
                 </div>
                 <ul className="space-y-3">
                   {section.organizations.map((org, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-start text-gray-700 dark:text-gray-300"
-                    >
-                      <svg
-                        className="w-5 h-5 text-emerald-600 dark:text-emerald-400 mr-3 flex-shrink-0 mt-0.5"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                      </svg>
-                      {org.id ? (
-                        <Link
-                          to={
-                            org.id === "librarian"
-                              ? "/services/librarian"
-                              : `/publishers/${org.id}`
-                          }
-                          className="text-left hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer"
+                    org.name === previewItemTitle ? (
+                      <li key={idx} className="text-gray-700 dark:text-gray-300">
+                        <button
+                          ref={pdfPreviewTriggerRef}
+                          type="button"
+                          onClick={() => setIsPdfPreviewOpen(true)}
+                          className="group flex w-full items-start rounded-lg px-3 py-2 text-left transition-all duration-200 hover:bg-emerald-50 hover:text-emerald-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 dark:hover:bg-emerald-900/20 dark:hover:text-emerald-300"
+                          aria-label={`Open PDF preview: ${previewItemTitle}`}
                         >
-                          {org.name}
-                        </Link>
-                      ) : (
-                        <span>{org.name}</span>
-                      )}
-                    </li>
+                          <CheckCircle2
+                            size={20}
+                            className="mr-3 mt-0.5 flex-shrink-0 text-emerald-600 transition-colors group-hover:text-emerald-700 dark:text-emerald-400 dark:group-hover:text-emerald-300"
+                            aria-hidden="true"
+                          />
+                          <span className="text-right leading-relaxed" dir="rtl">
+                            {org.name}
+                          </span>
+                        </button>
+                      </li>
+                    ) : (
+                      <li
+                        key={idx}
+                        className="flex items-start text-gray-700 dark:text-gray-300"
+                      >
+                        <svg
+                          className="w-5 h-5 text-emerald-600 dark:text-emerald-400 mr-3 flex-shrink-0 mt-0.5"
+                          fill="none"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        {org.id ? (
+                          <Link
+                            to={
+                              org.id === "librarian"
+                                ? "/services/librarian"
+                                : `/publishers/${org.id}`
+                            }
+                            className="text-left hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer"
+                          >
+                            {org.name}
+                          </Link>
+                        ) : (
+                          <span>{org.name}</span>
+                        )}
+                      </li>
+                    )
                   ))}
                 </ul>
               </div>
@@ -389,6 +435,14 @@ export default function Publishers() {
           </div>
         </div>
       </section>
+
+      <PDFPreviewModal
+        isOpen={isPdfPreviewOpen}
+        onClose={() => setIsPdfPreviewOpen(false)}
+        pdfUrl={DigitalLibraryOverviewPdf}
+        title={previewItemTitle}
+        triggerRef={pdfPreviewTriggerRef}
+      />
 
       <section className="py-20 lg:mx-20 md:mx-10 mx-0">
         <div className="container mx-auto px-4">

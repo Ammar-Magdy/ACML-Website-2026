@@ -10,12 +10,17 @@ import {
   Workflow,
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import aboutPhoto001 from "../assets/Photos/About/001.webp";
 import aboutPhoto006 from "../assets/Photos/About/006.webp";
 
+type AboutLanguage = "en" | "ar";
+
+const ABOUT_LANGUAGE_STORAGE_KEY = "about-who-we-are-language";
+
 export default function About() {
   const location = useLocation();
+  const [whoWeAreLanguage, setWhoWeAreLanguage] = useState<AboutLanguage>("en");
 
   useEffect(() => {
     document.title = "About Us";
@@ -27,6 +32,17 @@ export default function About() {
       }
     }
   }, [location]);
+
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem(ABOUT_LANGUAGE_STORAGE_KEY);
+    if (savedLanguage === "ar") {
+      setWhoWeAreLanguage("ar");
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem(ABOUT_LANGUAGE_STORAGE_KEY, whoWeAreLanguage);
+  }, [whoWeAreLanguage]);
 
   const values = [
     {
@@ -82,6 +98,31 @@ export default function About() {
     },
   ];
 
+  const whoWeAreContent = useMemo(
+    () => ({
+      en: {
+        heading: "Who We Are",
+        paragraphs: [
+          "ACML 2I2S is the leading provider of library media, technology solutions, and digital content management in Egypt. For over three decades, we have been the exclusive agent for numerous international publishers and technology providers, bringing world-class resources to libraries and institutions.",
+          "We specialize in books and periodicals, electronic journals, full-text databases, library automation systems, library furniture, restoration materials,and industry standards from professional societies and regulatory bodies worldwide.",
+          "Our commitment to excellence and innovation has made us the preferred partner for universities, research centers, corporate libraries, and government institutions seeking to modernize their information infrastructure.",
+        ],
+      },
+      ar: {
+        heading: "من نحن",
+        paragraphs: [
+          "تُعد ACML 2I2S شركة رائدة في توفير الوسائط المكتبية والحلول التقنية وإدارة المحتوى الرقمي في مصر. وعلى مدار أكثر من ثلاثة عقود، عملت الشركة وكيلاً حصريًا للعديد من دور النشر العالمية ومزودي الحلول التقنية، وقدمت موارد عالمية المستوى للمكتبات والمؤسسات.",
+          "نتخصص في توفير الكتب والدوريات، والمجلات الإلكترونية، وقواعد البيانات ذات النصوص الكاملة، وأنظمة أتمتة المكتبات، وأثاث المكتبات، ومواد الترميم، بالإضافة إلى بناء المكتبات الرقمية للأكواد والمواصفات الدولية وهي المصدر الوحيد له في مصر .",
+          "إن التزامنا بالتميز والابتكار جعلنا الشريك المفضل للجامعات ومراكز الأبحاث ومكتبات الشركات والمؤسسات الحكومية التي تسعى إلى تطوير بنيتها التحتية للمعلومات.",
+        ],
+      },
+    }),
+    [],
+  );
+
+  const isArabicWhoWeAre = whoWeAreLanguage === "ar";
+  const selectedWhoWeAre = whoWeAreContent[whoWeAreLanguage];
+
   return (
     <div className="pt-20">
       <section className="py-20 lg:mx-20 md:mx-10 mx-0">
@@ -103,29 +144,59 @@ export default function About() {
       <section className="py-20 lg:mx-20 md:mx-10 mx-0">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Who We Are
-              </h2>
-              <p className="text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                ACML is the leading provider of library media, technology
-                solutions, and digital content management in Egypt. For over
-                three decades, we have been the exclusive agent for numerous
-                international publishers and technology providers, bringing
-                world-class resources to libraries and institutions.
-              </p>
-              <p className="text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                We specialize in books and periodicals, electronic journals,
-                full-text databases, library automation systems, library
-                furniture, restoration materials,and industry standards from
-                professional societies and regulatory bodies worldwide.
-              </p>
-              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Our commitment to excellence and innovation has made us the
-                preferred partner for universities, research centers, corporate
-                libraries, and government institutions seeking to modernize
-                their information infrastructure.
-              </p>
+            <div
+              dir={isArabicWhoWeAre ? "rtl" : "ltr"}
+              className={`transition-opacity duration-200 ${
+                isArabicWhoWeAre ? "font-arabic" : ""
+              }`}
+            >
+              <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <h2
+                  className={`text-4xl font-bold text-gray-900 dark:text-white ${
+                    isArabicWhoWeAre ? "text-right" : "text-left"
+                  }`}
+                >
+                  {selectedWhoWeAre.heading}
+                </h2>
+                <div className="flex flex-wrap items-center gap-2 sm:justify-end">
+                  <button
+                    type="button"
+                    onClick={() => setWhoWeAreLanguage("en")}
+                    aria-label="Read in English"
+                    aria-pressed={whoWeAreLanguage === "en"}
+                    className={`inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border px-4 text-sm font-semibold tracking-wide transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 ${
+                      whoWeAreLanguage === "en"
+                        ? "border-emerald-600 bg-emerald-600 text-white shadow-sm"
+                        : "border-gray-300 bg-transparent text-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800"
+                    }`}
+                  >
+                    EN
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setWhoWeAreLanguage("ar")}
+                    aria-label="اقرأ بالعربية"
+                    aria-pressed={whoWeAreLanguage === "ar"}
+                    className={`inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border px-4 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 ${
+                      whoWeAreLanguage === "ar"
+                        ? "border-emerald-600 bg-emerald-600 text-white shadow-sm"
+                        : "border-gray-300 bg-transparent text-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800"
+                    } ${whoWeAreLanguage === "ar" ? "font-arabic" : ""}`}
+                  >
+                    ع
+                  </button>
+                </div>
+              </div>
+              {selectedWhoWeAre.paragraphs.map((paragraph, index) => (
+                <p
+                  key={index}
+                  className={`text-lg text-gray-700 dark:text-gray-300 leading-relaxed ${
+                    index < selectedWhoWeAre.paragraphs.length - 1 ? "mb-4" : ""
+                  } ${isArabicWhoWeAre ? "text-right" : "text-left"}`}
+                >
+                  {paragraph}
+                </p>
+              ))}
             </div>
             <div>
               <img
