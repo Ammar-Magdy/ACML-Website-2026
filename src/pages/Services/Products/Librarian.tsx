@@ -21,6 +21,7 @@ import hwSwPdf from "../../../assets/PDF/Services/Products/Librarian/HW-&-SW -As
 import engEvalPdf from "../../../assets/PDF/Services/Products/Librarian/Eval_ques_Eng.pdf";
 import arEvalPdf from "../../../assets/PDF/Services/Products/Librarian/Eval-Ques-ara.pdf";
 import phdPdf from "../../../assets/PDF/Services/Products/Librarian/رسالة-دكتوراة-المكتبى.pdf";
+import implementationPlanXlsx from "../../../assets/PDF/Services/Products/Librarian/IMPLEMENTATION-PLAN.xlsx";
 import { useEffect } from "react";
 
 export default function Librarian() {
@@ -275,6 +276,25 @@ export default function Librarian() {
                         className="text-emerald-600 hover:underline"
                       >
                         librarian Clients
+                      </a>
+                    </p>
+                  </div>
+                </div>
+                {/* IMPLEMENTATION PLAN */}
+                <div className="mb-6">
+                  <h4 className="font-bold text-lg mb-2 text-gray-900 dark:text-white">
+                    IMPLEMENTATION PLAN
+                  </h4>
+                  <div className="space-y-1">
+                    <p>
+                      <a
+                        href={`${implementationPlanXlsx}#view=FitH`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                        className="text-emerald-600 hover:underline"
+                      >
+                        IMPLEMENTATION PLAN
                       </a>
                     </p>
                   </div>
