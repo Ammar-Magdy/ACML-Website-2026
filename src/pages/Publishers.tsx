@@ -8,25 +8,29 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { useEffect,useState } from "react";
 import PDFPreviewModal from "../components/PDFPreviewModal";
 
 export default function Publishers() {
   const previewItemTitle =
     "شرح لمفهوم المكتبة الرقمية للأكواد والمواصفات الدولية";
-  const [isPdfPreviewOpen, setIsPdfPreviewOpen] = useState(false);
-  const pdfPreviewTriggerRef = useRef<HTMLButtonElement>(null);
+  const userProfileTitle = "User Profile";
+
+  const [selectedPdf, setSelectedPdf] = useState<{
+    title: string;
+    description?: string;
+    url: string;
+    downloadName?: string;
+    triggerElement?: HTMLElement;
+  } | null>(null);
+
+  const isPdfPreviewOpen = selectedPdf !== null;
 
   useEffect(() => {
     document.title = "Publishers";
   }, []);
 
-  // Deployment-safe public PDF URL.
-  // The PDF has been moved to: public/pdf/publishers/codes/codes.pdf (lowercase)
-  // Vite's base is respected so it works at root or in a subdirectory.
   const publicBase = import.meta.env.BASE_URL ?? "/";
-  const publicPdfPath = "pdf/publishers/codes/codes.pdf"; // relative to BASE_URL
-  const pdfUrl = `${publicBase}${publicPdfPath.replace(/^\/+/, "")}`;
 
   const location = useLocation();
   const publisherBodies = [
@@ -216,13 +220,15 @@ export default function Publishers() {
           name: "SDO’s - Standards Development Organizations & International Societies",
           id: "standards",
         },
+        { name: "ETC...", },
+        {
+          name: userProfileTitle,
+          id: "",
+        },
         {
           name: previewItemTitle,
           id: "",
         },
-        { name: "ETC...", },
-        
-
       ],
     },
     {
@@ -376,27 +382,63 @@ export default function Publishers() {
                   </h3>
                 </div>
                 <ul className="space-y-3">
-                  {section.organizations.map((org, idx) => (
-                    org.name === previewItemTitle ? (
-                      <li key={idx} className="text-gray-700 dark:text-gray-300">
-                        <button
-                          ref={pdfPreviewTriggerRef}
-                          type="button"
-                          onClick={() => setIsPdfPreviewOpen(true)}
-                          className="group flex w-full items-start rounded-lg px-3 py-2 text-left transition-all duration-200 hover:bg-emerald-50 hover:text-emerald-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 dark:hover:bg-emerald-900/20 dark:hover:text-emerald-300"
-                          aria-label={`Open PDF preview: ${previewItemTitle}`}
-                        >
-                          <CheckCircle2
-                            size={20}
-                            className="mr-3 mt-0.5 flex-shrink-0 text-emerald-600 transition-colors group-hover:text-emerald-700 dark:text-emerald-400 dark:group-hover:text-emerald-300"
-                            aria-hidden="true"
-                          />
-                          <span className="text-right leading-relaxed" dir="rtl">
-                            {org.name}
-                          </span>
-                        </button>
-                      </li>
-                    ) : (
+                  {section.organizations.map((org, idx) => {
+                    const isCodesPdf = org.name === previewItemTitle;
+                    const isUserProfilePdf = org.name === userProfileTitle;
+
+                    if (isCodesPdf || isUserProfilePdf) {
+                      const pdfPath = isCodesPdf 
+                        ? "pdf/publishers/codes/codes.pdf"
+                        : "pdf/publishers/user-profile/User-Profile.pdf";
+                      
+                      const downloadName = isCodesPdf 
+                        ? undefined 
+                        : "User-Profile.pdf";
+
+                      return (
+                        <li key={idx} className="text-gray-700 dark:text-gray-300">
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              setSelectedPdf({
+                                title: org.name,
+                                url: `${publicBase}${pdfPath.replace(/^\/+/, "")}`,
+                                downloadName,
+                                triggerElement: e.currentTarget
+                              });
+                            }}
+                            className="group flex w-full items-start justify-start gap-4 rounded-lg px-3 py-2 text-left transition-all duration-200 hover:bg-emerald-50 hover:text-emerald-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 dark:hover:bg-emerald-900/20 dark:hover:text-emerald-300"
+                            aria-label={`Open PDF preview: ${org.name}`}
+                          >
+                            <CheckCircle2
+                              size={20}
+                              className="mt-0.5 flex-none text-emerald-600 transition-colors group-hover:text-emerald-700 dark:text-emerald-400 dark:group-hover:text-emerald-300"
+                              aria-hidden="true"
+                            />
+                            <div
+                              className={`flex flex-col items-start flex-initial min-w-0 ${
+                                isCodesPdf
+                                  ? "w-fit max-w-[calc(100%-48px)] text-right"
+                                  : "text-left"
+                              }`}
+                              dir={isCodesPdf ? "rtl" : "ltr"}
+                              lang={isCodesPdf ? "ar" : "en"}
+                            >
+                              <span className="leading-relaxed">
+                                {org.name}
+                              </span>
+                              {isUserProfilePdf && (
+                                <span className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                                  It is ACML 2I2S form for engineers to define their needs from International Codes and Standards.
+                                </span>
+                              )}
+                            </div>
+                          </button>
+                        </li>
+                      );
+                    }
+
+                    return (
                       <li
                         key={idx}
                         className="flex items-start text-gray-700 dark:text-gray-300"
@@ -427,8 +469,8 @@ export default function Publishers() {
                           <span>{org.name}</span>
                         )}
                       </li>
-                    )
-                  ))}
+                    );
+                  })}
                 </ul>
               </div>
             ))}
@@ -438,10 +480,11 @@ export default function Publishers() {
 
       <PDFPreviewModal
         isOpen={isPdfPreviewOpen}
-        onClose={() => setIsPdfPreviewOpen(false)}
-        pdfUrl={pdfUrl}
-        title={previewItemTitle}
-        triggerRef={pdfPreviewTriggerRef}
+        onClose={() => setSelectedPdf(null)}
+        pdfUrl={selectedPdf?.url || ""}
+        title={selectedPdf?.title || ""}
+        downloadName={selectedPdf?.downloadName}
+        triggerRef={{ current: selectedPdf?.triggerElement || null } as React.RefObject<HTMLElement>}
       />
 
       <section className="py-20 lg:mx-20 md:mx-10 mx-0">
